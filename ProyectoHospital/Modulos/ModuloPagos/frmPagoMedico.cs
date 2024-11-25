@@ -15,6 +15,22 @@ namespace ProyectoHospital.Modulos.ModuloPagos
         public frmPagoMedico()
         {
             InitializeComponent();
+            toolTips();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        private void toolTips()
+        {
+            ToolTip ttp = new ToolTip();
+            ttp.SetToolTip(btnVolver, "Regresar al menu.");
         }
     }
 }

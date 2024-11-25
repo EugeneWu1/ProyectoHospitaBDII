@@ -15,6 +15,18 @@ namespace ProyectoHospital.Modulos.ModuloEspaciosClinicos
         public frmConsultorio()
         {
             InitializeComponent();
+            toolTips();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void toolTips()
+        {
+            ToolTip ttp = new ToolTip();
+            ttp.SetToolTip(btnVolver,"Regresar al menu.");
         }
     }
 }

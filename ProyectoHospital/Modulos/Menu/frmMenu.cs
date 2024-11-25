@@ -193,6 +193,11 @@ namespace ProyectoHospital.Modulos.Menu
 
         private void rjDropDownMenu4_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pagosAMédicosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             frmPagoMedico pago = new frmPagoMedico();
             pago.ShowDialog();
         }

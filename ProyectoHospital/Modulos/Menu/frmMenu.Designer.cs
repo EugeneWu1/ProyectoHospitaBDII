@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMedicosPacientes = new System.Windows.Forms.Button();
             this.barra = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -216,6 +217,7 @@
             // barra
             // 
             this.barra.BackColor = System.Drawing.Color.MidnightBlue;
+            this.barra.Controls.Add(this.label2);
             this.barra.Controls.Add(this.btnMinimizar);
             this.barra.Controls.Add(this.btnMaximizar);
             this.barra.Controls.Add(this.btnCerrar);
@@ -228,10 +230,22 @@
             this.barra.TabIndex = 1;
             this.barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_MouseDown);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(327, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 59);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "MENU";
+            // 
             // btnMinimizar
             // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(697, 18);
+            this.btnMinimizar.Location = new System.Drawing.Point(706, 18);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(36, 28);
             this.btnMinimizar.TabIndex = 4;
@@ -240,8 +254,9 @@
             // 
             // btnMaximizar
             // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(739, 18);
+            this.btnMaximizar.Location = new System.Drawing.Point(748, 18);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(39, 39);
             this.btnMaximizar.TabIndex = 3;
@@ -250,8 +265,9 @@
             // 
             // btnCerrar
             // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(784, 18);
+            this.btnCerrar.Location = new System.Drawing.Point(793, 18);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(38, 39);
             this.btnCerrar.TabIndex = 2;
@@ -289,26 +305,35 @@
             this.rjDropDownMenu1.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu1.Name = "rjDropDownMenu1";
             this.rjDropDownMenu1.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu1.Size = new System.Drawing.Size(144, 70);
+            this.rjDropDownMenu1.Size = new System.Drawing.Size(155, 76);
             // 
             // habitacionesToolStripMenuItem
             // 
+            this.habitacionesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.habitacionesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.habitacionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("habitacionesToolStripMenuItem.Image")));
             this.habitacionesToolStripMenuItem.Name = "habitacionesToolStripMenuItem";
-            this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.habitacionesToolStripMenuItem.Text = "Habitaciones";
             this.habitacionesToolStripMenuItem.Click += new System.EventHandler(this.habitacionesToolStripMenuItem_Click);
             // 
             // consultoriosToolStripMenuItem
             // 
+            this.consultoriosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.consultoriosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultoriosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultoriosToolStripMenuItem.Image")));
             this.consultoriosToolStripMenuItem.Name = "consultoriosToolStripMenuItem";
-            this.consultoriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultoriosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.consultoriosToolStripMenuItem.Text = "Consultorios";
             this.consultoriosToolStripMenuItem.Click += new System.EventHandler(this.consultoriosToolStripMenuItem_Click);
             // 
             // quirófanosToolStripMenuItem
             // 
+            this.quirófanosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.quirófanosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.quirófanosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quirófanosToolStripMenuItem.Image")));
             this.quirófanosToolStripMenuItem.Name = "quirófanosToolStripMenuItem";
-            this.quirófanosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quirófanosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.quirófanosToolStripMenuItem.Text = "Quirófanos";
             this.quirófanosToolStripMenuItem.Click += new System.EventHandler(this.quirófanosToolStripMenuItem_Click);
             // 
@@ -323,19 +348,25 @@
             this.rjDropDownMenu2.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu2.Name = "rjDropDownMenu2";
             this.rjDropDownMenu2.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu2.Size = new System.Drawing.Size(125, 48);
+            this.rjDropDownMenu2.Size = new System.Drawing.Size(134, 52);
             // 
             // médicosToolStripMenuItem
             // 
+            this.médicosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.médicosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.médicosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("médicosToolStripMenuItem.Image")));
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
-            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.médicosToolStripMenuItem.Text = "Médicos";
             this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
             // pacientesToolStripMenuItem
             // 
+            this.pacientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pacientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pacientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pacientesToolStripMenuItem.Image")));
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
@@ -351,26 +382,35 @@
             this.rjDropDownMenu3.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu3.Name = "rjDropDownMenu3";
             this.rjDropDownMenu3.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu3.Size = new System.Drawing.Size(156, 70);
+            this.rjDropDownMenu3.Size = new System.Drawing.Size(179, 76);
             // 
             // consultaToolStripMenuItem
             // 
+            this.consultaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.consultaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
+            this.consultaToolStripMenuItem.Text = "Consulta Médica";
             this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
             // 
             // hospitalizaciónToolStripMenuItem
             // 
+            this.hospitalizaciónToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.hospitalizaciónToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.hospitalizaciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hospitalizaciónToolStripMenuItem.Image")));
             this.hospitalizaciónToolStripMenuItem.Name = "hospitalizaciónToolStripMenuItem";
-            this.hospitalizaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hospitalizaciónToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
             this.hospitalizaciónToolStripMenuItem.Text = "Hospitalización";
             this.hospitalizaciónToolStripMenuItem.Click += new System.EventHandler(this.hospitalizaciónToolStripMenuItem_Click);
             // 
             // cirugíaToolStripMenuItem
             // 
+            this.cirugíaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cirugíaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cirugíaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cirugíaToolStripMenuItem.Image")));
             this.cirugíaToolStripMenuItem.Name = "cirugíaToolStripMenuItem";
-            this.cirugíaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cirugíaToolStripMenuItem.Size = new System.Drawing.Size(178, 24);
             this.cirugíaToolStripMenuItem.Text = "Cirugía";
             this.cirugíaToolStripMenuItem.Click += new System.EventHandler(this.cirugíaToolStripMenuItem_Click);
             // 
@@ -384,13 +424,16 @@
             this.rjDropDownMenu4.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu4.Name = "rjDropDownMenu4";
             this.rjDropDownMenu4.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu4.Size = new System.Drawing.Size(181, 48);
+            this.rjDropDownMenu4.Size = new System.Drawing.Size(139, 28);
             this.rjDropDownMenu4.Click += new System.EventHandler(this.rjDropDownMenu4_Click);
             // 
             // inventarioToolStripMenuItem
             // 
+            this.inventarioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.inventarioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.inventarioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inventarioToolStripMenuItem.Image")));
             this.inventarioToolStripMenuItem.Name = "inventarioToolStripMenuItem";
-            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inventarioToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.inventarioToolStripMenuItem.Text = "Inventario";
             this.inventarioToolStripMenuItem.Click += new System.EventHandler(this.inventarioToolStripMenuItem_Click);
             // 
@@ -405,20 +448,27 @@
             this.rjDropDownMenu5.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu5.Name = "rjDropDownMenu5";
             this.rjDropDownMenu5.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu5.Size = new System.Drawing.Size(172, 48);
+            this.rjDropDownMenu5.Size = new System.Drawing.Size(189, 52);
             // 
             // facturasPacientesToolStripMenuItem
             // 
+            this.facturasPacientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.facturasPacientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.facturasPacientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("facturasPacientesToolStripMenuItem.Image")));
             this.facturasPacientesToolStripMenuItem.Name = "facturasPacientesToolStripMenuItem";
-            this.facturasPacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.facturasPacientesToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
             this.facturasPacientesToolStripMenuItem.Text = "Facturas Pacientes";
             this.facturasPacientesToolStripMenuItem.Click += new System.EventHandler(this.facturasPacientesToolStripMenuItem_Click);
             // 
             // pagosAMédicosToolStripMenuItem
             // 
+            this.pagosAMédicosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.pagosAMédicosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.pagosAMédicosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pagosAMédicosToolStripMenuItem.Image")));
             this.pagosAMédicosToolStripMenuItem.Name = "pagosAMédicosToolStripMenuItem";
-            this.pagosAMédicosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.pagosAMédicosToolStripMenuItem.Size = new System.Drawing.Size(188, 24);
             this.pagosAMédicosToolStripMenuItem.Text = "Pagos a Médicos";
+            this.pagosAMédicosToolStripMenuItem.Click += new System.EventHandler(this.pagosAMédicosToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -437,6 +487,7 @@
             this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.barra.ResumeLayout(false);
+            this.barra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -484,5 +535,6 @@
         private Clases.RJDropDownMenu rjDropDownMenu5;
         private System.Windows.Forms.ToolStripMenuItem facturasPacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagosAMédicosToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
     }
 }
