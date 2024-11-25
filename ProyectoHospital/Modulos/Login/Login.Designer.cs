@@ -94,7 +94,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(331, 81);
+            this.label3.Location = new System.Drawing.Point(348, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 25);
             this.label3.TabIndex = 3;
@@ -125,20 +125,20 @@
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(440, 76);
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(439, 82);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(286, 30);
+            this.txtUser.Size = new System.Drawing.Size(286, 26);
             this.txtUser.TabIndex = 6;
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);
             // 
             // txtPass
             // 
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(439, 138);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(287, 30);
+            this.txtPass.Size = new System.Drawing.Size(287, 26);
             this.txtPass.TabIndex = 7;
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
@@ -148,9 +148,8 @@
             this.chkPass.AutoSize = true;
             this.chkPass.Location = new System.Drawing.Point(707, 173);
             this.chkPass.Name = "chkPass";
-            this.chkPass.Size = new System.Drawing.Size(95, 20);
+            this.chkPass.Size = new System.Drawing.Size(18, 17);
             this.chkPass.TabIndex = 8;
-            this.chkPass.Text = "checkBox1";
             this.chkPass.UseVisualStyleBackColor = true;
             this.chkPass.CheckedChanged += new System.EventHandler(this.chkPass_CheckedChanged);
             // 

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using ProyectoHospital.Modulos.Login;
+using ProyectoHospital.Modulos.Menu;
 
 namespace ProyectoHospital
 {
@@ -27,7 +28,7 @@ namespace ProyectoHospital
             if (frmLogin.Conectado)
             {
                 myConexion = frmLogin.Conexion;
-                Application.Run(new Login());
+                Application.Run(new frmMenu());
             }
         }
     }
