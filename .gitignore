@@ -1,0 +1,27 @@
+# Ignorar configuración del entorno de desarrollo de Visual Studio
+.vs/
+.vscode/
+.idea/
+
+# Ignorar archivos de cache
+*.cache/
+
+# Ignorar carpetas de compilación generadas por Visual Studio
+bin/
+obj/
+
+# Ignorar archivos temporales y de configuración de Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos de sistema innecesarios
+.DS_Store    # MacOS
+Thumbs.db    # Windows
+
+# Ignorar archivos binarios y de depuración
+*.exe
+*.pdb
+/ProyectoADSI2024/CrystalReport1.cs
+/ProyectoADSI2024/CrystalReport1.rpt
