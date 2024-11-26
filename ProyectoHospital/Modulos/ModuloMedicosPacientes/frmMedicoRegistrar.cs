@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoHospital.Modulos.ModuloEspaciosClinicos
+namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
 {
-    public partial class frmHabitacion : Form
+    public partial class frmMedicoRegistrar : Form
     {
-        public frmHabitacion()
+        public frmMedicoRegistrar()
         {
             InitializeComponent();
             toolTips();
@@ -22,7 +22,6 @@ namespace ProyectoHospital.Modulos.ModuloEspaciosClinicos
         {
             this.Dispose();
         }
-
         private void toolTips()
         {
             ToolTip ttp = new ToolTip();

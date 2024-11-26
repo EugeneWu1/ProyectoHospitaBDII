@@ -131,36 +131,6 @@ namespace ProyectoHospital.Modulos.Menu
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void habitacionesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmHabitacion Habitacion = new frmHabitacion();
-            Habitacion.ShowDialog();
-        }
-
-        private void consultoriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultorio cons = new frmConsultorio(); 
-            cons.ShowDialog();
-        }
-
-        private void quirófanosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmQuirofano quirofano = new frmQuirofano();
-            quirofano.ShowDialog();
-        }
-
-        private void médicosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmMedico medico = new frmMedico();
-            medico.ShowDialog();
-        }
-
-        private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPaciente paciente = new frmPaciente();
-            paciente.ShowDialog();
-        }
-
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConsulta consulta = new frmConsulta();
@@ -200,6 +170,72 @@ namespace ProyectoHospital.Modulos.Menu
         {
             frmPagoMedico pago = new frmPagoMedico();
             pago.ShowDialog();
+        }
+
+        private void gestiónDeHabitacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHabitacionRegistro Habitacion = new frmHabitacionRegistro();
+            Habitacion.ShowDialog();
+        }
+
+        private void asignarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultorioRegistro cons = new frmConsultorioRegistro();
+            cons.ShowDialog();
+        }
+
+        private void gestiónDeCategoríasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHabitacionCategorias categorias = new frmHabitacionCategorias();
+            categorias.ShowDialog();
+        }
+
+        private void disponiblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHabitacionDisponibles disponibles = new frmHabitacionDisponibles();
+            disponibles.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultorioConsulta consultar = new frmConsultorioConsulta();
+            consultar.ShowDialog();
+        }
+
+        private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuirofanoRegistrar quirofano = new frmQuirofanoRegistrar();
+            quirofano.ShowDialog();
+        }
+
+        private void disponiblesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmQuirofanoDisponible disponibleQuiro = new frmQuirofanoDisponible();
+            disponibleQuiro.ShowDialog();
+        }
+
+        private void registrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMedicoRegistrar medico = new frmMedicoRegistrar();
+            medico.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMedicoConsultar consultarMedico = new frmMedicoConsultar();
+            consultarMedico.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmPacienteRegistrar paciente = new frmPacienteRegistrar();
+            paciente.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmmPacienteConsultar pacientecons = new frmmPacienteConsultar();
+            pacientecons.ShowDialog();
         }
     }
 }

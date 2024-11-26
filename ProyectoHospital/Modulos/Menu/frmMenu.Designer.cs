@@ -62,6 +62,17 @@
             this.rjDropDownMenu5 = new ProyectoHospital.Clases.RJDropDownMenu(this.components);
             this.facturasPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pagosAMédicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeHabitacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestiónDeCategoríasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disponiblesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.asignarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disponiblesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.barra.SuspendLayout();
@@ -309,33 +320,40 @@
             // 
             // habitacionesToolStripMenuItem
             // 
+            this.habitacionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestiónDeHabitacionesToolStripMenuItem,
+            this.gestiónDeCategoríasToolStripMenuItem,
+            this.disponiblesToolStripMenuItem});
             this.habitacionesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.habitacionesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.habitacionesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("habitacionesToolStripMenuItem.Image")));
             this.habitacionesToolStripMenuItem.Name = "habitacionesToolStripMenuItem";
             this.habitacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.habitacionesToolStripMenuItem.Text = "Habitaciones";
-            this.habitacionesToolStripMenuItem.Click += new System.EventHandler(this.habitacionesToolStripMenuItem_Click);
             // 
             // consultoriosToolStripMenuItem
             // 
+            this.consultoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.asignarToolStripMenuItem,
+            this.consultarToolStripMenuItem});
             this.consultoriosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.consultoriosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.consultoriosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultoriosToolStripMenuItem.Image")));
             this.consultoriosToolStripMenuItem.Name = "consultoriosToolStripMenuItem";
             this.consultoriosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.consultoriosToolStripMenuItem.Text = "Consultorios";
-            this.consultoriosToolStripMenuItem.Click += new System.EventHandler(this.consultoriosToolStripMenuItem_Click);
             // 
             // quirófanosToolStripMenuItem
             // 
+            this.quirófanosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem,
+            this.disponiblesToolStripMenuItem1});
             this.quirófanosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.quirófanosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.quirófanosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quirófanosToolStripMenuItem.Image")));
             this.quirófanosToolStripMenuItem.Name = "quirófanosToolStripMenuItem";
             this.quirófanosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.quirófanosToolStripMenuItem.Text = "Quirófanos";
-            this.quirófanosToolStripMenuItem.Click += new System.EventHandler(this.quirófanosToolStripMenuItem_Click);
             // 
             // rjDropDownMenu2
             // 
@@ -348,27 +366,31 @@
             this.rjDropDownMenu2.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu2.Name = "rjDropDownMenu2";
             this.rjDropDownMenu2.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu2.Size = new System.Drawing.Size(134, 52);
+            this.rjDropDownMenu2.Size = new System.Drawing.Size(181, 74);
             // 
             // médicosToolStripMenuItem
             // 
+            this.médicosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarToolStripMenuItem1,
+            this.consultarToolStripMenuItem1});
             this.médicosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.médicosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.médicosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("médicosToolStripMenuItem.Image")));
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.médicosToolStripMenuItem.Text = "Médicos";
-            this.médicosToolStripMenuItem.Click += new System.EventHandler(this.médicosToolStripMenuItem_Click);
             // 
             // pacientesToolStripMenuItem
             // 
+            this.pacientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultarToolStripMenuItem2,
+            this.consultarToolStripMenuItem3});
             this.pacientesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.pacientesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pacientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pacientesToolStripMenuItem.Image")));
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(133, 24);
-            this.pacientesToolStripMenuItem.Text = "Pacientes";
-            this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.pacientesToolStripMenuItem.Text = "Paciente";
             // 
             // rjDropDownMenu3
             // 
@@ -470,6 +492,105 @@
             this.pagosAMédicosToolStripMenuItem.Text = "Pagos a Médicos";
             this.pagosAMédicosToolStripMenuItem.Click += new System.EventHandler(this.pagosAMédicosToolStripMenuItem_Click);
             // 
+            // gestiónDeHabitacionesToolStripMenuItem
+            // 
+            this.gestiónDeHabitacionesToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.gestiónDeHabitacionesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.gestiónDeHabitacionesToolStripMenuItem.Name = "gestiónDeHabitacionesToolStripMenuItem";
+            this.gestiónDeHabitacionesToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.gestiónDeHabitacionesToolStripMenuItem.Text = "Gestión de Habitaciones";
+            this.gestiónDeHabitacionesToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeHabitacionesToolStripMenuItem_Click);
+            // 
+            // gestiónDeCategoríasToolStripMenuItem
+            // 
+            this.gestiónDeCategoríasToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.gestiónDeCategoríasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.gestiónDeCategoríasToolStripMenuItem.Name = "gestiónDeCategoríasToolStripMenuItem";
+            this.gestiónDeCategoríasToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.gestiónDeCategoríasToolStripMenuItem.Text = "Gestión de Categorías";
+            this.gestiónDeCategoríasToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeCategoríasToolStripMenuItem_Click);
+            // 
+            // disponiblesToolStripMenuItem
+            // 
+            this.disponiblesToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.disponiblesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.disponiblesToolStripMenuItem.Name = "disponiblesToolStripMenuItem";
+            this.disponiblesToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
+            this.disponiblesToolStripMenuItem.Text = "Disponibles";
+            this.disponiblesToolStripMenuItem.Click += new System.EventHandler(this.disponiblesToolStripMenuItem_Click);
+            // 
+            // asignarToolStripMenuItem
+            // 
+            this.asignarToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.asignarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.asignarToolStripMenuItem.Name = "asignarToolStripMenuItem";
+            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.asignarToolStripMenuItem.Text = "Registrar";
+            this.asignarToolStripMenuItem.Click += new System.EventHandler(this.asignarToolStripMenuItem_Click);
+            // 
+            // consultarToolStripMenuItem
+            // 
+            this.consultarToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.consultarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            // 
+            // registrarToolStripMenuItem
+            // 
+            this.registrarToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.registrarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
+            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.registrarToolStripMenuItem.Text = "Registrar";
+            this.registrarToolStripMenuItem.Click += new System.EventHandler(this.registrarToolStripMenuItem_Click);
+            // 
+            // disponiblesToolStripMenuItem1
+            // 
+            this.disponiblesToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.disponiblesToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.disponiblesToolStripMenuItem1.Name = "disponiblesToolStripMenuItem1";
+            this.disponiblesToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.disponiblesToolStripMenuItem1.Text = "Disponibles";
+            this.disponiblesToolStripMenuItem1.Click += new System.EventHandler(this.disponiblesToolStripMenuItem1_Click);
+            // 
+            // registrarToolStripMenuItem1
+            // 
+            this.registrarToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.registrarToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.registrarToolStripMenuItem1.Name = "registrarToolStripMenuItem1";
+            this.registrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.registrarToolStripMenuItem1.Text = "Registrar";
+            this.registrarToolStripMenuItem1.Click += new System.EventHandler(this.registrarToolStripMenuItem1_Click);
+            // 
+            // consultarToolStripMenuItem1
+            // 
+            this.consultarToolStripMenuItem1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.consultarToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.consultarToolStripMenuItem1.Text = "Consultar";
+            this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
+            // 
+            // consultarToolStripMenuItem2
+            // 
+            this.consultarToolStripMenuItem2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.consultarToolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.consultarToolStripMenuItem2.Name = "consultarToolStripMenuItem2";
+            this.consultarToolStripMenuItem2.Size = new System.Drawing.Size(187, 24);
+            this.consultarToolStripMenuItem2.Text = "Registrar Paciente";
+            this.consultarToolStripMenuItem2.Click += new System.EventHandler(this.consultarToolStripMenuItem2_Click);
+            // 
+            // consultarToolStripMenuItem3
+            // 
+            this.consultarToolStripMenuItem3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.consultarToolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.consultarToolStripMenuItem3.Name = "consultarToolStripMenuItem3";
+            this.consultarToolStripMenuItem3.Size = new System.Drawing.Size(187, 24);
+            this.consultarToolStripMenuItem3.Text = "Consultar";
+            this.consultarToolStripMenuItem3.Click += new System.EventHandler(this.consultarToolStripMenuItem3_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,5 +657,16 @@
         private System.Windows.Forms.ToolStripMenuItem facturasPacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pagosAMédicosToolStripMenuItem;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDeHabitacionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestiónDeCategoríasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem disponiblesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem asignarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem disponiblesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem3;
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
+namespace ProyectoHospital.Modulos.ModuloEspaciosClinicos
 {
-    public partial class frmPaciente : Form
+    public partial class frmConsultorioConsulta : Form
     {
-        public frmPaciente()
+        public frmConsultorioConsulta()
         {
             InitializeComponent();
             toolTips();

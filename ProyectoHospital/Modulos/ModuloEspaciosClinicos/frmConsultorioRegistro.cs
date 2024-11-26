@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoHospital.Modulos.ModuloEspaciosClinicos
 {
-    public partial class frmQuirofano : Form
+    public partial class frmConsultorioRegistro : Form
     {
-        public frmQuirofano()
+        public frmConsultorioRegistro()
         {
             InitializeComponent();
             toolTips();
@@ -26,7 +26,7 @@ namespace ProyectoHospital.Modulos.ModuloEspaciosClinicos
         private void toolTips()
         {
             ToolTip ttp = new ToolTip();
-            ttp.SetToolTip(btnVolver, "Regresar al menu.");
+            ttp.SetToolTip(btnVolver,"Regresar al menu.");
         }
     }
 }

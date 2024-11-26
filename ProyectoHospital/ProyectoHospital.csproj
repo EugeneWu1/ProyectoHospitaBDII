@@ -52,6 +52,30 @@
     <Compile Include="Clases\RJDropDownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmConsultorioConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmConsultorioConsulta.Designer.cs">
+      <DependentUpon>frmConsultorioConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacionCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacionCategorias.Designer.cs">
+      <DependentUpon>frmHabitacionCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacionDisponibles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacionDisponibles.Designer.cs">
+      <DependentUpon>frmHabitacionDisponibles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmQuirofanoDisponible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmQuirofanoDisponible.Designer.cs">
+      <DependentUpon>frmQuirofanoDisponible.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulos\ModuloFarmacia\frmFarmacia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,35 +95,47 @@
     <Compile Include="Modulos\Menu\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloEspaciosClinicos\frmConsultorio.cs">
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmConsultorioRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloEspaciosClinicos\frmConsultorio.Designer.cs">
-      <DependentUpon>frmConsultorio.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmConsultorioRegistro.Designer.cs">
+      <DependentUpon>frmConsultorioRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacion.cs">
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacionRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacion.Designer.cs">
-      <DependentUpon>frmHabitacion.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmHabitacionRegistro.Designer.cs">
+      <DependentUpon>frmHabitacionRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloEspaciosClinicos\frmQuirofano.cs">
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmQuirofanoRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloEspaciosClinicos\frmQuirofano.Designer.cs">
-      <DependentUpon>frmQuirofano.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloEspaciosClinicos\frmQuirofanoRegistrar.Designer.cs">
+      <DependentUpon>frmQuirofanoRegistrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloMedicosPacientes\frmMedico.cs">
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmMedicoConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloMedicosPacientes\frmMedico.Designer.cs">
-      <DependentUpon>frmMedico.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmMedicoConsultar.Designer.cs">
+      <DependentUpon>frmMedicoConsultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloMedicosPacientes\frmPaciente.cs">
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmMedicoRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloMedicosPacientes\frmPaciente.Designer.cs">
-      <DependentUpon>frmPaciente.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmMedicoRegistrar.Designer.cs">
+      <DependentUpon>frmMedicoRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmmPacienteConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmmPacienteConsultar.Designer.cs">
+      <DependentUpon>frmmPacienteConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmPacienteRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloMedicosPacientes\frmPacienteRegistrar.Designer.cs">
+      <DependentUpon>frmPacienteRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\ModuloPagos\frmFactura.cs">
       <SubType>Form</SubType>
@@ -132,11 +168,23 @@
       <DependentUpon>frmHospitalizacionCirugia.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmConsultorio.resx">
-      <DependentUpon>frmConsultorio.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmConsultorioConsulta.resx">
+      <DependentUpon>frmConsultorioConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmQuirofano.resx">
-      <DependentUpon>frmQuirofano.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmConsultorioRegistro.resx">
+      <DependentUpon>frmConsultorioRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmHabitacionCategorias.resx">
+      <DependentUpon>frmHabitacionCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmHabitacionDisponibles.resx">
+      <DependentUpon>frmHabitacionDisponibles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmQuirofanoDisponible.resx">
+      <DependentUpon>frmQuirofanoDisponible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmQuirofanoRegistrar.resx">
+      <DependentUpon>frmQuirofanoRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\ModuloFarmacia\frmFarmacia.resx">
       <DependentUpon>frmFarmacia.cs</DependentUpon>
@@ -147,14 +195,20 @@
     <EmbeddedResource Include="Modulos\Menu\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmHabitacion.resx">
-      <DependentUpon>frmHabitacion.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmHabitacionRegistro.resx">
+      <DependentUpon>frmHabitacionRegistro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmMedico.resx">
-      <DependentUpon>frmMedico.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmMedicoConsultar.resx">
+      <DependentUpon>frmMedicoConsultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmPaciente.resx">
-      <DependentUpon>frmPaciente.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmMedicoRegistrar.resx">
+      <DependentUpon>frmMedicoRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmmPacienteConsultar.resx">
+      <DependentUpon>frmmPacienteConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmPacienteRegistrar.resx">
+      <DependentUpon>frmPacienteRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\ModuloPagos\frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
