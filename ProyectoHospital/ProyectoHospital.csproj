@@ -149,23 +149,41 @@
     <Compile Include="Modulos\ModuloPagos\frmPagoMedico.Designer.cs">
       <DependentUpon>frmPagoMedico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloServicios\frmCirugia.cs">
+    <Compile Include="Modulos\ModuloServicios\frmCirugiaAgendar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloServicios\frmCirugia.Designer.cs">
-      <DependentUpon>frmCirugia.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloServicios\frmCirugiaAgendar.Designer.cs">
+      <DependentUpon>frmCirugiaAgendar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloServicios\frmConsulta.cs">
+    <Compile Include="Modulos\ModuloServicios\frmCirugiaConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloServicios\frmConsulta.Designer.cs">
-      <DependentUpon>frmConsulta.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloServicios\frmCirugiaConsultas.Designer.cs">
+      <DependentUpon>frmCirugiaConsultas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloServicios\frmHospitalizacionCirugia.cs">
+    <Compile Include="Modulos\ModuloServicios\frmConsultaAgendar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloServicios\frmHospitalizacionCirugia.Designer.cs">
-      <DependentUpon>frmHospitalizacionCirugia.cs</DependentUpon>
+    <Compile Include="Modulos\ModuloServicios\frmConsultaAgendar.Designer.cs">
+      <DependentUpon>frmConsultaAgendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloServicios\frmConsultaBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloServicios\frmConsultaBuscar.Designer.cs">
+      <DependentUpon>frmConsultaBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloServicios\frmHospitalizacionAgendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloServicios\frmHospitalizacionAgendar.Designer.cs">
+      <DependentUpon>frmHospitalizacionAgendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\ModuloServicios\frmHospitalizacionConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\ModuloServicios\frmHospitalizacionConsultar.Designer.cs">
+      <DependentUpon>frmHospitalizacionConsultar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Modulos\ModuloEspaciosClinicos\frmConsultorioConsulta.resx">
@@ -216,14 +234,23 @@
     <EmbeddedResource Include="Modulos\ModuloPagos\frmPagoMedico.resx">
       <DependentUpon>frmPagoMedico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloServicios\frmCirugia.resx">
-      <DependentUpon>frmCirugia.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloServicios\frmCirugiaAgendar.resx">
+      <DependentUpon>frmCirugiaAgendar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloServicios\frmConsulta.resx">
-      <DependentUpon>frmConsulta.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloServicios\frmCirugiaConsultas.resx">
+      <DependentUpon>frmCirugiaConsultas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloServicios\frmHospitalizacionCirugia.resx">
-      <DependentUpon>frmHospitalizacionCirugia.cs</DependentUpon>
+    <EmbeddedResource Include="Modulos\ModuloServicios\frmConsultaAgendar.resx">
+      <DependentUpon>frmConsultaAgendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloServicios\frmConsultaBuscar.resx">
+      <DependentUpon>frmConsultaBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloServicios\frmHospitalizacionAgendar.resx">
+      <DependentUpon>frmHospitalizacionAgendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\ModuloServicios\frmHospitalizacionConsultar.resx">
+      <DependentUpon>frmHospitalizacionConsultar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

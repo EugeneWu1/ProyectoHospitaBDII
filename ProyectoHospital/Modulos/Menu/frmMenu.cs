@@ -16,6 +16,7 @@ using ProyectoHospital.Modulos.ModuloMedicosPacientes;
 using ProyectoHospital.Modulos.Servicios;
 using ProyectoHospital.Modulos.Farmacia;
 using ProyectoHospital.Modulos.ModuloPagos;
+using ProyectoHospital.Modulos.ModuloServicios;
 
 
 namespace ProyectoHospital.Modulos.Menu
@@ -45,7 +46,7 @@ namespace ProyectoHospital.Modulos.Menu
             rjDropDownMenu5.IsMainMenu = true;
             rjDropDownMenu5.PrimaryColor = Color.DeepSkyBlue;
 
-            
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -55,13 +56,13 @@ namespace ProyectoHospital.Modulos.Menu
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Desea salir del sistemma?","Confirmación",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            if (MessageBox.Show("¿Desea salir del sistemma?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 Application.Exit();
         }
 
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
-            if(this.WindowState==FormWindowState.Maximized)
+            if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
             }
@@ -107,22 +108,22 @@ namespace ProyectoHospital.Modulos.Menu
 
         private void btnMedicosPacientes_Click(object sender, EventArgs e)
         {
-            rjDropDownMenu2.Show(btnMedicosPacientes,btnMedicosPacientes.Width,0);
+            rjDropDownMenu2.Show(btnMedicosPacientes, btnMedicosPacientes.Width, 0);
         }
 
         private void btnServicios_Click(object sender, EventArgs e)
         {
-            rjDropDownMenu3.Show(btnServicios,btnServicios.Width,0);
+            rjDropDownMenu3.Show(btnServicios, btnServicios.Width, 0);
         }
 
         private void btnFarmacia_Click(object sender, EventArgs e)
         {
-            rjDropDownMenu4.Show(btnFarmacia,btnFarmacia.Width,0);
+            rjDropDownMenu4.Show(btnFarmacia, btnFarmacia.Width, 0);
         }
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
-            rjDropDownMenu5.Show(btnPagos,btnPagos.Width,0);
+            rjDropDownMenu5.Show(btnPagos, btnPagos.Width, 0);
         }
 
         private void barra_MouseDown(object sender, MouseEventArgs e)
@@ -133,20 +134,19 @@ namespace ProyectoHospital.Modulos.Menu
 
         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsulta consulta = new frmConsulta();
+            frmConsultaAgendar consulta = new frmConsultaAgendar();
             consulta.ShowDialog();
         }
 
         private void hospitalizaciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmHospitalizacionCirugia hops = new frmHospitalizacionCirugia();
+            frmHospitalizacionAgendar hops = new frmHospitalizacionAgendar();
             hops.ShowDialog();
         }
 
         private void cirugíaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCirugia cirugia = new frmCirugia();
-            cirugia.ShowDialog();
+           
         }
 
         private void inventarioToolStripMenuItem_Click(object sender, EventArgs e)
@@ -236,6 +236,48 @@ namespace ProyectoHospital.Modulos.Menu
         {
             frmmPacienteConsultar pacientecons = new frmmPacienteConsultar();
             pacientecons.ShowDialog();
+        }
+
+        private void agendarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaAgendar consulta = new frmConsultaAgendar();
+            consulta.ShowDialog();
+        }
+
+        private void agendarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmHospitalizacionAgendar hops = new frmHospitalizacionAgendar();
+            hops.ShowDialog();
+        }
+
+        private void agendarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmCirugiaAgendar cirugia = new frmCirugiaAgendar();
+            cirugia.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            frmConsultaBuscar ConsBuscar = new frmConsultaBuscar();  
+            ConsBuscar.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            frmHospitalizacionConsultar hospAgendar = new frmHospitalizacionConsultar();
+            hospAgendar.ShowDialog();
+        }
+
+        private void agendarToolStripMenuItem2_Click_1(object sender, EventArgs e)
+        {
+            frmCirugiaAgendar cirugiaAgendar = new frmCirugiaAgendar();
+            cirugiaAgendar.ShowDialog();
+        }
+
+        private void consultarToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            frmCirugiaConsultas consultasCirugia = new frmCirugiaConsultas();
+            consultasCirugia.ShowDialog();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoHospital.Modulos.Servicios
 {
-    public partial class frmConsulta : Form
+    public partial class frmCirugiaAgendar : Form
     {
-        public frmConsulta()
+        public frmCirugiaAgendar()
         {
             InitializeComponent();
             toolTips();
