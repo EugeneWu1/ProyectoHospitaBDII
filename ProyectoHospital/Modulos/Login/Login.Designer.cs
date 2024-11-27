@@ -39,10 +39,12 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.chkPass = new System.Windows.Forms.CheckBox();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,33 +155,27 @@
             this.chkPass.UseVisualStyleBackColor = true;
             this.chkPass.CheckedChanged += new System.EventHandler(this.chkPass_CheckedChanged);
             // 
-            // btnCerrar
+            // btnExit
             // 
-            this.btnCerrar.BackColor = System.Drawing.Color.Black;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCerrar.Location = new System.Drawing.Point(740, 12);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(1);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(28, 23);
-            this.btnCerrar.TabIndex = 9;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.Location = new System.Drawing.Point(746, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(22, 21);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 9;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnMinimizar
             // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.Black;
-            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimizar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMinimizar.Location = new System.Drawing.Point(707, 12);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(1);
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(720, 15);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(29, 23);
+            this.btnMinimizar.Size = new System.Drawing.Size(14, 18);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMinimizar.TabIndex = 10;
-            this.btnMinimizar.Text = "-";
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 
             // Login
             // 
@@ -188,7 +184,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 283);
             this.Controls.Add(this.btnMinimizar);
-            this.Controls.Add(this.btnCerrar);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.chkPass);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
@@ -202,9 +198,12 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +221,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.CheckBox chkPass;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.PictureBox btnExit;
+        private System.Windows.Forms.PictureBox btnMinimizar;
     }
 }

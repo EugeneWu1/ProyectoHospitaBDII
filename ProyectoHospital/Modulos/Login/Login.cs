@@ -37,7 +37,7 @@ namespace ProyectoHospital.Modulos.Login
             toolTip.ToolTipTitle = "Ayuda";
             toolTip.UseAnimation = true;
 
-            toolTip.SetToolTip(btnCerrar, "Salir de sistema.");
+            toolTip.SetToolTip(btnExit, "Cerrar.");
             toolTip.SetToolTip(btnEntrar, "Click para entrar al sistema.");
             toolTip.SetToolTip(lblForgotPass, "Click si ha olvidado su contraseña.");
             toolTip.SetToolTip(txtPass, "Ingrese su contraseña previamente establecida");
@@ -182,6 +182,22 @@ namespace ProyectoHospital.Modulos.Login
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtUser.Text = "eugene.wu";
+            txtPass.Text = "EW20212030388";
         }
     }
 }

@@ -291,5 +291,11 @@ namespace ProyectoHospital.Modulos.Menu
             frmPagoMedicoRegistrar pago = new frmPagoMedicoRegistrar();
             pago.ShowDialog();
         }
+
+        private void consultarPagosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPagoConsultar pagocons = new frmPagoConsultar();
+            pagocons.ShowDialog();
+        }
     }
 }
