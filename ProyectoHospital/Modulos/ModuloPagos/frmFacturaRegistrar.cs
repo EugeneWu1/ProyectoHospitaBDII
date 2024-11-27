@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace ProyectoHospital.Modulos.ModuloPagos
 {
-    public partial class frmPagoMedico : Form
+    public partial class frmFacturaRegistrar : Form
     {
-        public frmPagoMedico()
+        public frmFacturaRegistrar()
         {
             InitializeComponent();
             toolTips();
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnVolver_Click(object sender, EventArgs e)

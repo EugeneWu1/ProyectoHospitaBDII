@@ -157,7 +157,7 @@ namespace ProyectoHospital.Modulos.Menu
 
         private void facturasPacientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFactura factura = new frmFactura();
+            frmFacturaRegistrar factura = new frmFacturaRegistrar();
             factura.ShowDialog();
         }
 
@@ -168,7 +168,7 @@ namespace ProyectoHospital.Modulos.Menu
 
         private void pagosAMédicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPagoMedico pago = new frmPagoMedico();
+            frmPagoMedicoRegistrar pago = new frmPagoMedicoRegistrar();
             pago.ShowDialog();
         }
 
@@ -278,6 +278,18 @@ namespace ProyectoHospital.Modulos.Menu
         {
             frmCirugiaConsultas consultasCirugia = new frmCirugiaConsultas();
             consultasCirugia.ShowDialog();
+        }
+
+        private void crearFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFacturaRegistrar factura = new frmFacturaRegistrar();
+            factura.ShowDialog();
+        }
+
+        private void crearPagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPagoMedicoRegistrar pago = new frmPagoMedicoRegistrar();
+            pago.ShowDialog();
         }
     }
 }
