@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace ProyectoHospital.Modulos.ModuloPagos
 {
@@ -68,23 +69,22 @@ namespace ProyectoHospital.Modulos.ModuloPagos
 
                 // Obtener precios del servicio y/o insumos
                 float precioServicio = ObtenerPrecioServicio(servicioId);
-                float precioInsumo = !string.IsNullOrWhiteSpace(insumoUsado) ? ObtenerPrecioInsumo(int.Parse(insumoUsado)) : 0;
+                float precioInsumo = !string.IsNullOrWhiteSpace(insumoUsado)? ObtenerPrecioInsumo(insumoUsado): 0;
 
-                // Calcular subtotal
-                float precioUnitario = precioServicio > 0 ? precioServicio : precioInsumo;
-                float subtotal = cantidad * precioUnitario;
+                float subtotal = (float)Math.Round(precioServicio + (cantidad * precioInsumo), 2);
                 tboxSubtotal.Text = subtotal.ToString("F2");
 
-                // Calcular ISV (15% como ejemplo)
-                float isv = subtotal * 0.15f;
+                // Calcular ISV (15%)
+                float isv = (float)Math.Round(0.15f, 2);
                 tboxISV.Text = isv.ToString("F2");
 
                 // Calcular total
-                float total = subtotal + isv;
+                float total = (float)Math.Round(subtotal + (subtotal * isv), 2);
                 tboxTotal.Text = total.ToString("F2");
 
+
                 // Agregar datos al DataGridView
-                tabla.Rows.Add(nombrePaciente, identidadPaciente, servicioNombre, fecha, insumoUsado, cantidad, precioUnitario, descripcion, isv, subtotal);
+                tabla.Rows.Add(nombrePaciente, identidadPaciente, servicioNombre, fecha, insumoUsado, cantidad, precioInsumo, descripcion, isv, subtotal);
 
                 // Limpiar campos para nueva entrada
                 LimpiarCampos();
@@ -127,7 +127,7 @@ namespace ProyectoHospital.Modulos.ModuloPagos
                 // Crear la lista para los servicios
                 BindingList<KeyValuePair<int, string>> servicios = new BindingList<KeyValuePair<int, string>>
                 {
-                    new KeyValuePair<int, string>(0, "Seleccione un Servicio...") 
+                    new KeyValuePair<int, string>(0, "Seleccione un Servicio...")
                 };
 
                 // Leer los resultados
@@ -156,9 +156,9 @@ namespace ProyectoHospital.Modulos.ModuloPagos
         {
             tabla = new DataTable();
             tabla.Columns.Add("Paciente", typeof(string));
-            tabla.Columns.Add("Identidad", typeof(int));
+            tabla.Columns.Add("Identidad", typeof(string));
             tabla.Columns.Add("Servicio", typeof(string));
-            tabla.Columns.Add("Fecha",typeof(DateTime));
+            tabla.Columns.Add("Fecha", typeof(DateTime));
             tabla.Columns.Add("Insumo", typeof(string));
             tabla.Columns.Add("Cantidad", typeof(int));
             tabla.Columns.Add("Precio Unitario", typeof(float));
@@ -173,40 +173,75 @@ namespace ProyectoHospital.Modulos.ModuloPagos
         private float ObtenerPrecioServicio(int servicioId)
         {
             float precio = 0;
+            string cadenaConexion = "Server=3.128.144.165; Database=DB20212030388; User ID=eugene.wu; Password=EW20212030388;";
+            string query = "EXEC spPrecioServicio @ServicioID";
+
             try
             {
-                using (SqlConnection connection = conexion.ObtenerConexion())
+                // Crear la conexión con la base de datos
+                using (SqlConnection connection = new SqlConnection(cadenaConexion))
                 {
-                    using (SqlCommand command = new SqlCommand("spPrecioServicio", connection))
+                    // Crear el comando con el query y la conexión
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
+                        // Agregar el parámetro del procedimiento almacenado
                         command.Parameters.AddWithValue("@ServicioID", servicioId);
+
+                        // Abrir la conexión
                         connection.Open();
-                        precio = (float)command.ExecuteScalar();
+
+                        // Ejecutar el comando y obtener el resultado
+                        object resultado = command.ExecuteScalar();
+
+                        // Verificar si el resultado no es nulo y convertirlo a float
+                        if (resultado != null && float.TryParse(resultado.ToString(), out precio))
+                        {
+                            return precio;
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener precio del servicio: " + ex.Message);
+                MessageBox.Show("Error al obtener precio del servicio: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             return precio;
         }
 
+
+
+
+
         //OBTENER PRECIO DE LOS INSUMOS
-        private float ObtenerPrecioInsumo(int productoId)
+        private float ObtenerPrecioInsumo(string nombreInsumo)
         {
             float precio = 0;
+            string cadenaConexion = "Server=3.128.144.165; Database=DB20212030388; User ID=eugene.wu; Password=EW20212030388;";
+            string query = "EXEC spPrecioInsumos @NombreInsumo";
+
             try
             {
-                using (SqlConnection connection = conexion.ObtenerConexion())
+                // Crear la conexión con la base de datos
+                using (SqlConnection connection = new SqlConnection(cadenaConexion))
                 {
-                    using (SqlCommand command = new SqlCommand("spPrecioInsumos", connection))
+                    // Crear el comando con el query y la conexión
+                    using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@ProductoID", productoId);
+                        // Agregar el parámetro del procedimiento almacenado
+                        command.Parameters.AddWithValue("@NombreInsumo", nombreInsumo);
+
+                        // Abrir la conexión
                         connection.Open();
-                        precio = (float)command.ExecuteScalar();
+
+                        // Ejecutar el comando y obtener el resultado
+                        object resultado = command.ExecuteScalar();
+
+                        // Verificar si el resultado no es nulo y convertirlo a float
+                        if (resultado != null && float.TryParse(resultado.ToString(), out precio))
+                        {
+                            return precio;
+                        }
                     }
                 }
             }
