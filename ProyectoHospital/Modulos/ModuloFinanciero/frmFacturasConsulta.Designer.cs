@@ -33,9 +33,14 @@
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgFacturas = new System.Windows.Forms.DataGridView();
+            this.cboxOpciones = new System.Windows.Forms.ComboBox();
+            this.tboxBuscador = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,11 +89,50 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulta de Facturas";
             // 
+            // dgFacturas
+            // 
+            this.dgFacturas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgFacturas.Location = new System.Drawing.Point(22, 173);
+            this.dgFacturas.Name = "dgFacturas";
+            this.dgFacturas.Size = new System.Drawing.Size(765, 456);
+            this.dgFacturas.TabIndex = 2;
+            // 
+            // cboxOpciones
+            // 
+            this.cboxOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxOpciones.FormattingEnabled = true;
+            this.cboxOpciones.Location = new System.Drawing.Point(24, 134);
+            this.cboxOpciones.Name = "cboxOpciones";
+            this.cboxOpciones.Size = new System.Drawing.Size(259, 28);
+            this.cboxOpciones.TabIndex = 3;
+            // 
+            // tboxBuscador
+            // 
+            this.tboxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxBuscador.Location = new System.Drawing.Point(452, 134);
+            this.tboxBuscador.Name = "tboxBuscador";
+            this.tboxBuscador.Size = new System.Drawing.Size(336, 26);
+            this.tboxBuscador.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(289, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "BUSCAR FACTURA";
+            // 
             // frmFacturasConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 645);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tboxBuscador);
+            this.Controls.Add(this.cboxOpciones);
+            this.Controls.Add(this.dgFacturas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFacturasConsulta";
@@ -98,7 +142,9 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFacturas)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +154,9 @@
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgFacturas;
+        private System.Windows.Forms.ComboBox cboxOpciones;
+        private System.Windows.Forms.TextBox tboxBuscador;
+        private System.Windows.Forms.Label label2;
     }
 }
