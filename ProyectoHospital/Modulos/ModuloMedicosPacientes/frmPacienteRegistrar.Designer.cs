@@ -33,20 +33,20 @@
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.telef = new System.Windows.Forms.TextBox();
+            this.direc = new System.Windows.Forms.TextBox();
+            this.fecha = new System.Windows.Forms.DateTimePicker();
             this.clsButton = new System.Windows.Forms.PictureBox();
             this.deleteButton = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
             this.insertButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.espeCombo = new System.Windows.Forms.ComboBox();
-            this.consultID = new System.Windows.Forms.TextBox();
+            this.dgRegPac = new System.Windows.Forms.DataGridView();
+            this.sexCombo = new System.Windows.Forms.ComboBox();
             this.name = new System.Windows.Forms.TextBox();
-            this.medID = new System.Windows.Forms.TextBox();
+            this.identidad = new System.Windows.Forms.TextBox();
+            this.pacID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.iddd = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRegPac)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,33 +104,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Pacientes";
             // 
-            // textBox2
+            // telef
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 353);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 27);
-            this.textBox2.TabIndex = 219;
+            this.telef.Location = new System.Drawing.Point(172, 353);
+            this.telef.Multiline = true;
+            this.telef.Name = "telef";
+            this.telef.Size = new System.Drawing.Size(121, 27);
+            this.telef.TabIndex = 219;
             // 
-            // textBox1
+            // direc
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 312);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 27);
-            this.textBox1.TabIndex = 218;
+            this.direc.Location = new System.Drawing.Point(172, 312);
+            this.direc.Multiline = true;
+            this.direc.Name = "direc";
+            this.direc.Size = new System.Drawing.Size(121, 27);
+            this.direc.TabIndex = 218;
             // 
-            // dateTimePicker1
+            // fecha
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 230);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
-            this.dateTimePicker1.TabIndex = 217;
-            this.dateTimePicker1.Value = new System.DateTime(2024, 11, 23, 0, 0, 0, 0);
+            this.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.fecha.Location = new System.Drawing.Point(172, 230);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(121, 20);
+            this.fecha.TabIndex = 217;
+            this.fecha.Value = new System.DateTime(2024, 11, 23, 0, 0, 0, 0);
             // 
             // clsButton
             // 
+            this.clsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clsButton.Image = global::ProyectoHospital.Properties.Resources.Clear;
             this.clsButton.Location = new System.Drawing.Point(309, 409);
             this.clsButton.Name = "clsButton";
@@ -138,6 +139,7 @@
             this.clsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.clsButton.TabIndex = 216;
             this.clsButton.TabStop = false;
+            this.clsButton.Click += new System.EventHandler(this.clsButton_Click);
             // 
             // deleteButton
             // 
@@ -148,6 +150,7 @@
             this.deleteButton.TabIndex = 215;
             this.deleteButton.Text = "ELIMINAR";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // updateButton
             // 
@@ -158,6 +161,7 @@
             this.updateButton.TabIndex = 214;
             this.updateButton.Text = "EDITAR";
             this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // insertButton
             // 
@@ -168,30 +172,24 @@
             this.insertButton.TabIndex = 213;
             this.insertButton.Text = "AGREGAR";
             this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
             // 
-            // dataGridView1
+            // dgRegPac
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(309, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(482, 302);
-            this.dataGridView1.TabIndex = 212;
+            this.dgRegPac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRegPac.Location = new System.Drawing.Point(309, 86);
+            this.dgRegPac.Name = "dgRegPac";
+            this.dgRegPac.Size = new System.Drawing.Size(482, 302);
+            this.dgRegPac.TabIndex = 212;
+            this.dgRegPac.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRegPac_CellClick);
             // 
-            // espeCombo
+            // sexCombo
             // 
-            this.espeCombo.FormattingEnabled = true;
-            this.espeCombo.Location = new System.Drawing.Point(172, 276);
-            this.espeCombo.Name = "espeCombo";
-            this.espeCombo.Size = new System.Drawing.Size(121, 21);
-            this.espeCombo.TabIndex = 211;
-            // 
-            // consultID
-            // 
-            this.consultID.Location = new System.Drawing.Point(172, 182);
-            this.consultID.Multiline = true;
-            this.consultID.Name = "consultID";
-            this.consultID.Size = new System.Drawing.Size(121, 27);
-            this.consultID.TabIndex = 210;
+            this.sexCombo.FormattingEnabled = true;
+            this.sexCombo.Location = new System.Drawing.Point(172, 276);
+            this.sexCombo.Name = "sexCombo";
+            this.sexCombo.Size = new System.Drawing.Size(121, 21);
+            this.sexCombo.TabIndex = 211;
             // 
             // name
             // 
@@ -199,15 +197,23 @@
             this.name.Multiline = true;
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(121, 27);
-            this.name.TabIndex = 209;
+            this.name.TabIndex = 210;
             // 
-            // medID
+            // identidad
             // 
-            this.medID.Location = new System.Drawing.Point(172, 98);
-            this.medID.Multiline = true;
-            this.medID.Name = "medID";
-            this.medID.Size = new System.Drawing.Size(121, 27);
-            this.medID.TabIndex = 208;
+            this.identidad.Location = new System.Drawing.Point(172, 185);
+            this.identidad.Multiline = true;
+            this.identidad.Name = "identidad";
+            this.identidad.Size = new System.Drawing.Size(121, 27);
+            this.identidad.TabIndex = 209;
+            // 
+            // pacID
+            // 
+            this.pacID.Location = new System.Drawing.Point(172, 98);
+            this.pacID.Multiline = true;
+            this.pacID.Name = "pacID";
+            this.pacID.Size = new System.Drawing.Size(121, 27);
+            this.pacID.TabIndex = 208;
             // 
             // label6
             // 
@@ -219,15 +225,15 @@
             this.label6.TabIndex = 207;
             this.label6.Text = "Sexo";
             // 
-            // label10
+            // iddd
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(35, 141);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 21);
-            this.label10.TabIndex = 206;
-            this.label10.Text = "ConsultaID";
+            this.iddd.AutoSize = true;
+            this.iddd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iddd.Location = new System.Drawing.Point(35, 185);
+            this.iddd.Name = "iddd";
+            this.iddd.Size = new System.Drawing.Size(84, 21);
+            this.iddd.TabIndex = 206;
+            this.iddd.Text = "Identidad";
             // 
             // label8
             // 
@@ -242,7 +248,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(35, 182);
+            this.label7.Location = new System.Drawing.Point(35, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 21);
             this.label7.TabIndex = 204;
@@ -283,20 +289,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 495);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.telef);
+            this.Controls.Add(this.direc);
+            this.Controls.Add(this.fecha);
             this.Controls.Add(this.clsButton);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.insertButton);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.espeCombo);
-            this.Controls.Add(this.consultID);
+            this.Controls.Add(this.dgRegPac);
+            this.Controls.Add(this.sexCombo);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.medID);
+            this.Controls.Add(this.identidad);
+            this.Controls.Add(this.pacID);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.iddd);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -307,12 +313,13 @@
             this.Name = "frmPacienteRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paciente";
+            this.Load += new System.EventHandler(this.frmPacienteRegistrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRegPac)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,20 +331,20 @@
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox telef;
+        private System.Windows.Forms.TextBox direc;
+        private System.Windows.Forms.DateTimePicker fecha;
         private System.Windows.Forms.PictureBox clsButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button insertButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox espeCombo;
-        private System.Windows.Forms.TextBox consultID;
+        private System.Windows.Forms.DataGridView dgRegPac;
+        private System.Windows.Forms.ComboBox sexCombo;
         private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.TextBox medID;
+        private System.Windows.Forms.TextBox identidad;
+        private System.Windows.Forms.TextBox pacID;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label iddd;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
