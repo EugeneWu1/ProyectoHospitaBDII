@@ -36,18 +36,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkActivo = new System.Windows.Forms.CheckBox();
-            this.cboxTipoPago = new System.Windows.Forms.ComboBox();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cboxPaciente = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.tboxNoFactura = new System.Windows.Forms.TextBox();
+            this.tboxNombrePaciente = new System.Windows.Forms.TextBox();
+            this.tboxISV = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tboxSubtotal = new System.Windows.Forms.TextBox();
+            this.dgDetalle = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tbnAyuda = new System.Windows.Forms.Button();
+            this.tboxIdentificacion = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDetalle)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,85 +108,54 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 145);
+            this.label2.Location = new System.Drawing.Point(44, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 17);
+            this.label2.Size = new System.Drawing.Size(140, 17);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Buscar Paciente";
+            this.label2.Text = "Nombre del Paciente";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(42, 199);
+            this.label3.Location = new System.Drawing.Point(126, 194);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Tipo de Pago";
+            this.label3.Text = "Servicio";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(42, 259);
+            this.label4.Location = new System.Drawing.Point(39, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(145, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha de Facturación";
             // 
-            // chkActivo
-            // 
-            this.chkActivo.AutoSize = true;
-            this.chkActivo.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.chkActivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkActivo.Location = new System.Drawing.Point(45, 466);
-            this.chkActivo.Name = "chkActivo";
-            this.chkActivo.Size = new System.Drawing.Size(65, 21);
-            this.chkActivo.TabIndex = 4;
-            this.chkActivo.Text = "Activo";
-            this.chkActivo.UseVisualStyleBackColor = true;
-            // 
-            // cboxTipoPago
-            // 
-            this.cboxTipoPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxTipoPago.FormattingEnabled = true;
-            this.cboxTipoPago.Location = new System.Drawing.Point(159, 217);
-            this.cboxTipoPago.Name = "cboxTipoPago";
-            this.cboxTipoPago.Size = new System.Drawing.Size(183, 24);
-            this.cboxTipoPago.TabIndex = 5;
-            // 
             // dtpFecha
             // 
             this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFecha.Location = new System.Drawing.Point(101, 300);
+            this.dtpFecha.Location = new System.Drawing.Point(195, 230);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(241, 23);
+            this.dtpFecha.Size = new System.Drawing.Size(242, 23);
             this.dtpFecha.TabIndex = 6;
             // 
             // cboxPaciente
             // 
             this.cboxPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxPaciente.FormattingEnabled = true;
-            this.cboxPaciente.Location = new System.Drawing.Point(159, 171);
+            this.cboxPaciente.Location = new System.Drawing.Point(195, 188);
             this.cboxPaciente.Name = "cboxPaciente";
-            this.cboxPaciente.Size = new System.Drawing.Size(183, 24);
+            this.cboxPaciente.Size = new System.Drawing.Size(213, 24);
             this.cboxPaciente.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(42, 334);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Precio";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(42, 373);
+            this.label6.Location = new System.Drawing.Point(600, 195);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 17);
             this.label6.TabIndex = 9;
@@ -188,46 +165,151 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(42, 420);
+            this.label7.Location = new System.Drawing.Point(589, 238);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 10;
             this.label7.Text = "Total";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(620, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 24);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "DETALLES ";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(44, 96);
+            this.label9.Location = new System.Drawing.Point(326, 87);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 17);
+            this.label9.Size = new System.Drawing.Size(130, 17);
             this.label9.TabIndex = 12;
-            this.label9.Text = "FacturaID";
+            this.label9.Text = "Número de Factura";
+            // 
+            // tboxNoFactura
+            // 
+            this.tboxNoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxNoFactura.Location = new System.Drawing.Point(462, 84);
+            this.tboxNoFactura.Name = "tboxNoFactura";
+            this.tboxNoFactura.ReadOnly = true;
+            this.tboxNoFactura.Size = new System.Drawing.Size(100, 23);
+            this.tboxNoFactura.TabIndex = 13;
+            this.tboxNoFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tboxNombrePaciente
+            // 
+            this.tboxNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxNombrePaciente.Location = new System.Drawing.Point(195, 121);
+            this.tboxNombrePaciente.Name = "tboxNombrePaciente";
+            this.tboxNombrePaciente.Size = new System.Drawing.Size(213, 23);
+            this.tboxNombrePaciente.TabIndex = 14;
+            // 
+            // tboxISV
+            // 
+            this.tboxISV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxISV.Location = new System.Drawing.Point(635, 191);
+            this.tboxISV.Name = "tboxISV";
+            this.tboxISV.ReadOnly = true;
+            this.tboxISV.Size = new System.Drawing.Size(140, 23);
+            this.tboxISV.TabIndex = 15;
+            this.tboxISV.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(635, 232);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(140, 23);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(569, 157);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 17);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "Subtotal";
+            // 
+            // tboxSubtotal
+            // 
+            this.tboxSubtotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxSubtotal.Location = new System.Drawing.Point(635, 151);
+            this.tboxSubtotal.Name = "tboxSubtotal";
+            this.tboxSubtotal.ReadOnly = true;
+            this.tboxSubtotal.Size = new System.Drawing.Size(140, 23);
+            this.tboxSubtotal.TabIndex = 18;
+            this.tboxSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // dgDetalle
+            // 
+            this.dgDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDetalle.Location = new System.Drawing.Point(21, 283);
+            this.dgDetalle.Name = "dgDetalle";
+            this.dgDetalle.Size = new System.Drawing.Size(842, 252);
+            this.dgDetalle.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(691, 547);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(172, 58);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Generar Factura";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // tbnAyuda
+            // 
+            this.tbnAyuda.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tbnAyuda.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnAyuda.ForeColor = System.Drawing.Color.White;
+            this.tbnAyuda.Location = new System.Drawing.Point(26, 547);
+            this.tbnAyuda.Name = "tbnAyuda";
+            this.tbnAyuda.Size = new System.Drawing.Size(76, 27);
+            this.tbnAyuda.TabIndex = 21;
+            this.tbnAyuda.Text = "Ayuda";
+            this.tbnAyuda.UseVisualStyleBackColor = false;
+            // 
+            // tboxIdentificacion
+            // 
+            this.tboxIdentificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxIdentificacion.Location = new System.Drawing.Point(195, 154);
+            this.tboxIdentificacion.Name = "tboxIdentificacion";
+            this.tboxIdentificacion.Size = new System.Drawing.Size(213, 23);
+            this.tboxIdentificacion.TabIndex = 22;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 160);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(172, 17);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Identificacion del Paciente";
             // 
             // frmFacturaRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 626);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.tboxIdentificacion);
+            this.Controls.Add(this.tbnAyuda);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgDetalle);
+            this.Controls.Add(this.tboxSubtotal);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tboxISV);
+            this.Controls.Add(this.tboxNombrePaciente);
+            this.Controls.Add(this.tboxNoFactura);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.cboxPaciente);
             this.Controls.Add(this.dtpFecha);
-            this.Controls.Add(this.cboxTipoPago);
-            this.Controls.Add(this.chkActivo);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -235,11 +317,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFacturaRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Facturas Pacientes";
+            this.Text = "+";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgDetalle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,14 +337,21 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox chkActivo;
-        private System.Windows.Forms.ComboBox cboxTipoPago;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.ComboBox cboxPaciente;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tboxNoFactura;
+        private System.Windows.Forms.TextBox tboxNombrePaciente;
+        private System.Windows.Forms.TextBox tboxISV;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tboxSubtotal;
+        private System.Windows.Forms.DataGridView dgDetalle;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button tbnAyuda;
+        private System.Windows.Forms.TextBox tboxIdentificacion;
+        private System.Windows.Forms.Label label8;
     }
 }

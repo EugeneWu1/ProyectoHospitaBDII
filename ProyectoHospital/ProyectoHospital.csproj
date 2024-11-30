@@ -137,28 +137,28 @@
     <Compile Include="Modulos\ModuloMedicosPacientes\frmPacienteRegistrar.Designer.cs">
       <DependentUpon>frmPacienteRegistrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmFacturaRegistrar.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmFacturaRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmFacturaRegistrar.Designer.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmFacturaRegistrar.Designer.cs">
       <DependentUpon>frmFacturaRegistrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmFacturasConsulta.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmFacturasConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmFacturasConsulta.Designer.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmFacturasConsulta.Designer.cs">
       <DependentUpon>frmFacturasConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmPagoConsultar.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmPagoConsultar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmPagoConsultar.Designer.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmPagoConsultar.Designer.cs">
       <DependentUpon>frmPagoConsultar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmPagoMedicoRegistrar.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmPagoMedicoRegistrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\ModuloPagos\frmPagoMedicoRegistrar.Designer.cs">
+    <Compile Include="Modulos\ModuloFinanciero\frmPagoMedicoRegistrar.Designer.cs">
       <DependentUpon>frmPagoMedicoRegistrar.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulos\ModuloServicios\frmCirugiaAgendar.cs">
@@ -246,16 +246,16 @@
     <EmbeddedResource Include="Modulos\ModuloMedicosPacientes\frmPacienteRegistrar.resx">
       <DependentUpon>frmPacienteRegistrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloPagos\frmFacturaRegistrar.resx">
+    <EmbeddedResource Include="Modulos\ModuloFinanciero\frmFacturaRegistrar.resx">
       <DependentUpon>frmFacturaRegistrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloPagos\frmFacturasConsulta.resx">
+    <EmbeddedResource Include="Modulos\ModuloFinanciero\frmFacturasConsulta.resx">
       <DependentUpon>frmFacturasConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloPagos\frmPagoConsultar.resx">
+    <EmbeddedResource Include="Modulos\ModuloFinanciero\frmPagoConsultar.resx">
       <DependentUpon>frmPagoConsultar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulos\ModuloPagos\frmPagoMedicoRegistrar.resx">
+    <EmbeddedResource Include="Modulos\ModuloFinanciero\frmPagoMedicoRegistrar.resx">
       <DependentUpon>frmPagoMedicoRegistrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulos\ModuloServicios\frmCirugiaAgendar.resx">

@@ -297,5 +297,11 @@ namespace ProyectoHospital.Modulos.Menu
             frmPagoConsultar pagocons = new frmPagoConsultar();
             pagocons.ShowDialog();
         }
+
+        private void consultarFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFacturasConsulta frmFactConsultas = new frmFacturasConsulta();
+            frmFactConsultas.ShowDialog();
+        }
     }
 }
