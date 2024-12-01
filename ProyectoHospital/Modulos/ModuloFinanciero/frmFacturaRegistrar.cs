@@ -33,6 +33,7 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             cboxServicios.DropDownStyle = ComboBoxStyle.DropDownList;
             dgFactura.AllowUserToResizeColumns = false;
             dgFactura.AllowUserToResizeRows = false;
+            dgFactura.ReadOnly = false;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -52,8 +53,7 @@ namespace ProyectoHospital.Modulos.ModuloPagos
                 }
 
                 if (string.IsNullOrWhiteSpace(tboxNombrePaciente.Text) ||
-                    string.IsNullOrWhiteSpace(tboxIdentidad.Text) ||
-                    string.IsNullOrWhiteSpace(tboxCantidadInsumo.Text))
+                    string.IsNullOrWhiteSpace(tboxIdentidad.Text))
                 {
                     MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -65,21 +65,24 @@ namespace ProyectoHospital.Modulos.ModuloPagos
                 int servicioId = (int)cboxServicios.SelectedValue;
                 string servicioNombre = cboxServicios.Text;
                 DateTime fecha = dtpFecha.Value;
-                string insumoUsado = tboxInsumo.Text;
-                int cantidad = int.Parse(tboxCantidadInsumo.Text);
+
+                // Validar si los campos de insumo y cantidad están vacíos
+                string insumoUsado = string.IsNullOrWhiteSpace(tboxInsumo.Text) ? "Ninguno" : tboxInsumo.Text;
+                int cantidad = string.IsNullOrWhiteSpace(tboxCantidadInsumo.Text) ? 0 : int.Parse(tboxCantidadInsumo.Text);
+
                 string descripcion = tboxDescripcion.Text;
 
                 // Calcular subtotal e ISV
                 float precioServicio = ObtenerPrecioServicio(servicioId);
-                float precioInsumo = !string.IsNullOrWhiteSpace(insumoUsado) ? ObtenerPrecioInsumo(insumoUsado) : 0;
+                float precioInsumo = !string.IsNullOrWhiteSpace(insumoUsado) && insumoUsado != "Ninguno" ? ObtenerPrecioInsumo(insumoUsado) : 0;
 
                 float subtotal = (float)Math.Round(precioServicio + (cantidad * precioInsumo), 2);
                 tboxSubtotal.Text = subtotal.ToString("F2");
 
-                float isv = (float)Math.Round(0.15f, 2);
+                float isv = (float)Math.Round(0.15f * subtotal, 2);
                 tboxISV.Text = isv.ToString("F2");
 
-                float total = (float)Math.Round(subtotal + (subtotal * isv), 2);
+                float total = (float)Math.Round(subtotal + isv, 2);
                 tboxTotal.Text = total.ToString("F2");
 
                 // Agregar datos al DataGridView
@@ -182,6 +185,9 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             }
         }
 
+        
+
+
         // Método para obtener el ServicioID según el nombre del servicio
         private int ObtenerServicioID(string nombreServicio, SqlConnection connection)
         {
@@ -201,7 +207,6 @@ namespace ProyectoHospital.Modulos.ModuloPagos
         }
 
 
-       
 
         private void toolTips()
         {
@@ -266,9 +271,9 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             tabla.Columns.Add("Cantidad", typeof(int));
             tabla.Columns.Add("Precio Unitario", typeof(float));
             tabla.Columns.Add("Descripcion", typeof(string));
-            tabla.Columns.Add("ISV", typeof(float));
-            tabla.Columns.Add("Subtotal", typeof(float));
-            dgFactura.ReadOnly = true;
+           // tabla.Columns.Add("ISV", typeof(float));
+           // tabla.Columns.Add("Subtotal", typeof(float));
+            
             dgFactura.DataSource = tabla; // Asignar la tabla al DataGridView
         }
 
@@ -360,8 +365,15 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             tboxDescripcion.Clear();
             cboxServicios.SelectedIndex = 0; // Restablecer al primer elemento
             dtpFecha.Value = DateTime.Now;
+            tboxTotalPagar.Clear();
+            tboxISV.Clear();
+            tboxSubtotal.Clear();
+            tboxTotal.Clear();
         }
 
-        
+        private void tbnAyuda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para editar seleccione una fila.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
+        }
     }
 }

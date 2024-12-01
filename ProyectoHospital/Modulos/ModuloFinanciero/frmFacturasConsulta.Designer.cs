@@ -34,8 +34,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgFacturas = new System.Windows.Forms.DataGridView();
-            this.cboxOpciones = new System.Windows.Forms.ComboBox();
-            this.tboxBuscador = new System.Windows.Forms.TextBox();
+            this.cboxFiltro = new System.Windows.Forms.ComboBox();
+            this.tboxTexto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
@@ -97,22 +97,27 @@
             this.dgFacturas.Size = new System.Drawing.Size(765, 456);
             this.dgFacturas.TabIndex = 2;
             // 
-            // cboxOpciones
+            // cboxFiltro
             // 
-            this.cboxOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxOpciones.FormattingEnabled = true;
-            this.cboxOpciones.Location = new System.Drawing.Point(24, 134);
-            this.cboxOpciones.Name = "cboxOpciones";
-            this.cboxOpciones.Size = new System.Drawing.Size(259, 28);
-            this.cboxOpciones.TabIndex = 3;
+            this.cboxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxFiltro.FormattingEnabled = true;
+            this.cboxFiltro.Items.AddRange(new object[] {
+            "Nombre Paciente",
+            "Identidad",
+            "Fecha Facturación"});
+            this.cboxFiltro.Location = new System.Drawing.Point(24, 134);
+            this.cboxFiltro.Name = "cboxFiltro";
+            this.cboxFiltro.Size = new System.Drawing.Size(259, 28);
+            this.cboxFiltro.TabIndex = 3;
             // 
-            // tboxBuscador
+            // tboxTexto
             // 
-            this.tboxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxBuscador.Location = new System.Drawing.Point(452, 134);
-            this.tboxBuscador.Name = "tboxBuscador";
-            this.tboxBuscador.Size = new System.Drawing.Size(336, 26);
-            this.tboxBuscador.TabIndex = 4;
+            this.tboxTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxTexto.Location = new System.Drawing.Point(452, 134);
+            this.tboxTexto.Name = "tboxTexto";
+            this.tboxTexto.Size = new System.Drawing.Size(336, 26);
+            this.tboxTexto.TabIndex = 4;
+            this.tboxTexto.TextChanged += new System.EventHandler(this.tboxTexto_TextChanged);
             // 
             // label2
             // 
@@ -130,8 +135,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 645);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tboxBuscador);
-            this.Controls.Add(this.cboxOpciones);
+            this.Controls.Add(this.tboxTexto);
+            this.Controls.Add(this.cboxFiltro);
             this.Controls.Add(this.dgFacturas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -155,8 +160,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgFacturas;
-        private System.Windows.Forms.ComboBox cboxOpciones;
-        private System.Windows.Forms.TextBox tboxBuscador;
+        private System.Windows.Forms.ComboBox cboxFiltro;
+        private System.Windows.Forms.TextBox tboxTexto;
         private System.Windows.Forms.Label label2;
     }
 }
