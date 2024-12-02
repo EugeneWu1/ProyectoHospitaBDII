@@ -40,8 +40,6 @@
             this.cboxServicios = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tboxNoFactura = new System.Windows.Forms.TextBox();
             this.tboxNombrePaciente = new System.Windows.Forms.TextBox();
             this.tboxISV = new System.Windows.Forms.TextBox();
             this.tboxTotal = new System.Windows.Forms.TextBox();
@@ -59,7 +57,6 @@
             this.dgFactura = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.tboxDescripcion = new System.Windows.Forms.TextBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tboxTotalPagar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -181,26 +178,6 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "Total";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(326, 87);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 17);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Número de Factura";
-            // 
-            // tboxNoFactura
-            // 
-            this.tboxNoFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxNoFactura.Location = new System.Drawing.Point(462, 84);
-            this.tboxNoFactura.Name = "tboxNoFactura";
-            this.tboxNoFactura.ReadOnly = true;
-            this.tboxNoFactura.Size = new System.Drawing.Size(100, 23);
-            this.tboxNoFactura.TabIndex = 13;
-            this.tboxNoFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // tboxNombrePaciente
             // 
             this.tboxNombrePaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,7 +231,7 @@
             this.btnGuardarFactura.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnGuardarFactura.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarFactura.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarFactura.Location = new System.Drawing.Point(696, 558);
+            this.btnGuardarFactura.Location = new System.Drawing.Point(696, 549);
             this.btnGuardarFactura.Name = "btnGuardarFactura";
             this.btnGuardarFactura.Size = new System.Drawing.Size(172, 58);
             this.btnGuardarFactura.TabIndex = 20;
@@ -273,6 +250,7 @@
             this.tbnAyuda.TabIndex = 21;
             this.tbnAyuda.Text = "Ayuda";
             this.tbnAyuda.UseVisualStyleBackColor = false;
+            this.tbnAyuda.Click += new System.EventHandler(this.tbnAyuda_Click);
             // 
             // tboxIdentidad
             // 
@@ -370,18 +348,6 @@
             this.tboxDescripcion.Size = new System.Drawing.Size(300, 78);
             this.tboxDescripcion.TabIndex = 31;
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEditar.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(518, 558);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(172, 58);
-            this.btnEditar.TabIndex = 32;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -409,7 +375,6 @@
             this.ClientSize = new System.Drawing.Size(1131, 626);
             this.Controls.Add(this.tboxTotalPagar);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.tboxDescripcion);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dgFactura);
@@ -427,8 +392,6 @@
             this.Controls.Add(this.tboxTotal);
             this.Controls.Add(this.tboxISV);
             this.Controls.Add(this.tboxNombrePaciente);
-            this.Controls.Add(this.tboxNoFactura);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cboxServicios);
@@ -465,8 +428,6 @@
         private System.Windows.Forms.ComboBox cboxServicios;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tboxNoFactura;
         private System.Windows.Forms.TextBox tboxNombrePaciente;
         private System.Windows.Forms.TextBox tboxISV;
         private System.Windows.Forms.TextBox tboxTotal;
@@ -484,7 +445,6 @@
         private System.Windows.Forms.DataGridView dgFactura;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox tboxDescripcion;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tboxTotalPagar;
     }
