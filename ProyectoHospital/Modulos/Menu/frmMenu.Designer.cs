@@ -124,7 +124,7 @@
             this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
             this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfig.Location = new System.Drawing.Point(4, 528);
-            this.btnConfig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConfig.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(196, 69);
             this.btnConfig.TabIndex = 7;
@@ -140,7 +140,7 @@
             this.btnPagos.Image = ((System.Drawing.Image)(resources.GetObject("btnPagos.Image")));
             this.btnPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPagos.Location = new System.Drawing.Point(0, 391);
-            this.btnPagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPagos.Margin = new System.Windows.Forms.Padding(4);
             this.btnPagos.Name = "btnPagos";
             this.btnPagos.Size = new System.Drawing.Size(200, 69);
             this.btnPagos.TabIndex = 6;
@@ -157,7 +157,7 @@
             this.btnEspaciosClinicos.Image = ((System.Drawing.Image)(resources.GetObject("btnEspaciosClinicos.Image")));
             this.btnEspaciosClinicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEspaciosClinicos.Location = new System.Drawing.Point(0, 86);
-            this.btnEspaciosClinicos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEspaciosClinicos.Margin = new System.Windows.Forms.Padding(4);
             this.btnEspaciosClinicos.Name = "btnEspaciosClinicos";
             this.btnEspaciosClinicos.Size = new System.Drawing.Size(200, 69);
             this.btnEspaciosClinicos.TabIndex = 2;
@@ -174,7 +174,7 @@
             this.btnFarmacia.Image = ((System.Drawing.Image)(resources.GetObject("btnFarmacia.Image")));
             this.btnFarmacia.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnFarmacia.Location = new System.Drawing.Point(0, 314);
-            this.btnFarmacia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFarmacia.Margin = new System.Windows.Forms.Padding(4);
             this.btnFarmacia.Name = "btnFarmacia";
             this.btnFarmacia.Size = new System.Drawing.Size(200, 69);
             this.btnFarmacia.TabIndex = 5;
@@ -200,7 +200,7 @@
             this.btnServicios.ForeColor = System.Drawing.Color.White;
             this.btnServicios.Image = ((System.Drawing.Image)(resources.GetObject("btnServicios.Image")));
             this.btnServicios.Location = new System.Drawing.Point(0, 237);
-            this.btnServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnServicios.Margin = new System.Windows.Forms.Padding(4);
             this.btnServicios.Name = "btnServicios";
             this.btnServicios.Size = new System.Drawing.Size(200, 69);
             this.btnServicios.TabIndex = 4;
@@ -227,7 +227,7 @@
             this.btnMedicosPacientes.ForeColor = System.Drawing.Color.White;
             this.btnMedicosPacientes.Image = ((System.Drawing.Image)(resources.GetObject("btnMedicosPacientes.Image")));
             this.btnMedicosPacientes.Location = new System.Drawing.Point(0, 160);
-            this.btnMedicosPacientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMedicosPacientes.Margin = new System.Windows.Forms.Padding(4);
             this.btnMedicosPacientes.Name = "btnMedicosPacientes";
             this.btnMedicosPacientes.Size = new System.Drawing.Size(200, 69);
             this.btnMedicosPacientes.TabIndex = 3;
@@ -250,6 +250,7 @@
             this.barra.Name = "barra";
             this.barra.Size = new System.Drawing.Size(852, 73);
             this.barra.TabIndex = 1;
+            this.barra.Paint += new System.Windows.Forms.PaintEventHandler(this.barra_Paint);
             this.barra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barra_MouseDown);
             // 
             // label2
@@ -646,7 +647,7 @@
             this.rjDropDownMenu5.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu5.Name = "rjDropDownMenu5";
             this.rjDropDownMenu5.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu5.Size = new System.Drawing.Size(193, 78);
+            this.rjDropDownMenu5.Size = new System.Drawing.Size(193, 56);
             // 
             // facturasPacientesToolStripMenuItem
             // 

@@ -33,10 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dgvQuirofano = new System.Windows.Forms.DataGridView();
+            this.cmdGuardar = new System.Windows.Forms.Button();
+            this.cmdCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuirofano)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(338, 23);
+            this.label1.Location = new System.Drawing.Point(301, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 32);
             this.label1.TabIndex = 2;
@@ -67,7 +70,7 @@
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(662, 9);
+            this.btnVolver.Location = new System.Drawing.Point(662, 7);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(57, 58);
             this.btnVolver.TabIndex = 1;
@@ -77,39 +80,62 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(61, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // dgvQuirofano
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 315);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "crud con datagrid. hospital.quirofano";
+            this.dgvQuirofano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuirofano.Location = new System.Drawing.Point(12, 78);
+            this.dgvQuirofano.Name = "dgvQuirofano";
+            this.dgvQuirofano.Size = new System.Drawing.Size(707, 342);
+            this.dgvQuirofano.TabIndex = 1;
+            this.dgvQuirofano.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgvQuirofano_EditingControlShowing);
+            // 
+            // cmdGuardar
+            // 
+            this.cmdGuardar.Location = new System.Drawing.Point(10, 437);
+            this.cmdGuardar.Name = "cmdGuardar";
+            this.cmdGuardar.Size = new System.Drawing.Size(138, 33);
+            this.cmdGuardar.TabIndex = 2;
+            this.cmdGuardar.Text = "Guardar";
+            this.cmdGuardar.UseVisualStyleBackColor = true;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Location = new System.Drawing.Point(582, 437);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(138, 33);
+            this.cmdCancelar.TabIndex = 4;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = true;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // frmQuirofanoRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 634);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(732, 482);
+            this.Controls.Add(this.cmdCancelar);
+            this.Controls.Add(this.cmdGuardar);
+            this.Controls.Add(this.dgvQuirofano);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuirofanoRegistrar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quirofano";
+            this.Load += new System.EventHandler(this.frmQuirofanoRegistrar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuirofano)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -119,6 +145,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvQuirofano;
+        private System.Windows.Forms.Button cmdGuardar;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

@@ -33,11 +33,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dgvHabitacionesDispo = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacionesDispo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,7 +49,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 75);
+            this.panel1.Size = new System.Drawing.Size(852, 75);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -58,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(182, 22);
+            this.label1.Location = new System.Drawing.Point(208, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(445, 32);
             this.label1.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.btnVolver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnVolver.Image = ((System.Drawing.Image)(resources.GetObject("btnVolver.Image")));
-            this.btnVolver.Location = new System.Drawing.Point(723, 8);
+            this.btnVolver.Location = new System.Drawing.Point(775, 8);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(64, 56);
             this.btnVolver.TabIndex = 1;
@@ -85,42 +85,32 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // dgvHabitacionesDispo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(244, 341);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "aqui solo va un datagridview con la vista de habitaciones disponibles";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(270, 367);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(265, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "hospital.habitaciones y hospital.habitacionescategorias";
+            this.dgvHabitacionesDispo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHabitacionesDispo.Location = new System.Drawing.Point(9, 81);
+            this.dgvHabitacionesDispo.Name = "dgvHabitacionesDispo";
+            this.dgvHabitacionesDispo.Size = new System.Drawing.Size(831, 378);
+            this.dgvHabitacionesDispo.TabIndex = 4;
             // 
             // frmHabitacionDisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(852, 471);
+            this.Controls.Add(this.dgvHabitacionesDispo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHabitacionDisponibles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHabitacionDisponibles";
+            this.Load += new System.EventHandler(this.frmHabitacionDisponibles_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHabitacionesDispo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -130,7 +120,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvHabitacionesDispo;
     }
 }

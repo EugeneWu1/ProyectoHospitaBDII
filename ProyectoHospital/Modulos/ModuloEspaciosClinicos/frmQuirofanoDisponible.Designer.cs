@@ -34,14 +34,17 @@
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dgvQuirofanoConsulta = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuirofanoConsulta)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -87,29 +90,38 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(260, 227);
+            this.label2.Location = new System.Drawing.Point(271, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "datagrid que va a tener una vista. hosptal.quirofano";
+            // 
+            // dgvQuirofanoConsulta
+            // 
+            this.dgvQuirofanoConsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvQuirofanoConsulta.Location = new System.Drawing.Point(10, 78);
+            this.dgvQuirofanoConsulta.Name = "dgvQuirofanoConsulta";
+            this.dgvQuirofanoConsulta.Size = new System.Drawing.Size(777, 360);
+            this.dgvQuirofanoConsulta.TabIndex = 2;
             // 
             // frmQuirofanoDisponible
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dgvQuirofanoConsulta);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuirofanoDisponible";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuirofanoDisponible";
+            this.Load += new System.EventHandler(this.frmQuirofanoDisponible_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvQuirofanoConsulta)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -120,5 +132,6 @@
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvQuirofanoConsulta;
     }
 }

@@ -362,6 +362,19 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             dtpFecha.Value = DateTime.Now;
         }
 
-        
+        private void frmFacturaRegistrar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmFacturaRegistrar_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

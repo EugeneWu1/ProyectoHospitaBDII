@@ -303,5 +303,10 @@ namespace ProyectoHospital.Modulos.Menu
             frmFacturasConsulta frmFactConsultas = new frmFacturasConsulta();
             frmFactConsultas.ShowDialog();
         }
+
+        private void barra_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
