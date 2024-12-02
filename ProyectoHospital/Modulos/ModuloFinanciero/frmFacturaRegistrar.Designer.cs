@@ -46,7 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tboxSubtotal = new System.Windows.Forms.TextBox();
             this.btnGuardarFactura = new System.Windows.Forms.Button();
-            this.tbnAyuda = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.tboxIdentidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -239,18 +239,17 @@
             this.btnGuardarFactura.UseVisualStyleBackColor = false;
             this.btnGuardarFactura.Click += new System.EventHandler(this.btnGuardarFactura_Click);
             // 
-            // tbnAyuda
+            // btnAyuda
             // 
-            this.tbnAyuda.BackColor = System.Drawing.Color.RoyalBlue;
-            this.tbnAyuda.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnAyuda.ForeColor = System.Drawing.Color.White;
-            this.tbnAyuda.Location = new System.Drawing.Point(21, 556);
-            this.tbnAyuda.Name = "tbnAyuda";
-            this.tbnAyuda.Size = new System.Drawing.Size(76, 27);
-            this.tbnAyuda.TabIndex = 21;
-            this.tbnAyuda.Text = "Ayuda";
-            this.tbnAyuda.UseVisualStyleBackColor = false;
-            this.tbnAyuda.Click += new System.EventHandler(this.tbnAyuda_Click);
+            this.btnAyuda.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAyuda.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.ForeColor = System.Drawing.Color.White;
+            this.btnAyuda.Location = new System.Drawing.Point(21, 556);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(76, 27);
+            this.btnAyuda.TabIndex = 21;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = false;
             // 
             // tboxIdentidad
             // 
@@ -385,7 +384,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tboxIdentidad);
-            this.Controls.Add(this.tbnAyuda);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnGuardarFactura);
             this.Controls.Add(this.tboxSubtotal);
             this.Controls.Add(this.label5);
@@ -434,7 +433,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tboxSubtotal;
         private System.Windows.Forms.Button btnGuardarFactura;
-        private System.Windows.Forms.Button tbnAyuda;
+        private System.Windows.Forms.Button btnAyuda;
         private System.Windows.Forms.TextBox tboxIdentidad;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;

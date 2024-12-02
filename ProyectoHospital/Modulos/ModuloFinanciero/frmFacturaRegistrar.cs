@@ -185,7 +185,7 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             }
         }
 
-        
+
 
 
         // Método para obtener el ServicioID según el nombre del servicio
@@ -271,9 +271,9 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             tabla.Columns.Add("Cantidad", typeof(int));
             tabla.Columns.Add("Precio Unitario", typeof(float));
             tabla.Columns.Add("Descripcion", typeof(string));
-           // tabla.Columns.Add("ISV", typeof(float));
-           // tabla.Columns.Add("Subtotal", typeof(float));
-            
+            // tabla.Columns.Add("ISV", typeof(float));
+            // tabla.Columns.Add("Subtotal", typeof(float));
+
             dgFactura.DataSource = tabla; // Asignar la tabla al DataGridView
         }
 
@@ -371,7 +371,6 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             tboxTotal.Clear();
         }
 
-<<<<<<< HEAD
         private void frmFacturaRegistrar_Load(object sender, EventArgs e)
         {
 
@@ -385,11 +384,13 @@ namespace ProyectoHospital.Modulos.ModuloPagos
         private void frmFacturaRegistrar_Load_1(object sender, EventArgs e)
         {
 
-=======
-        private void tbnAyuda_Click(object sender, EventArgs e)
+            
+        }
+        private void btnAyuda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Para editar seleccione una fila.","Información",MessageBoxButtons.OK,MessageBoxIcon.Information);
->>>>>>> 26acbc069a6f9e03a47f184c2d4e8d45d5c24117
+            MessageBox.Show("Para editar seleccione una fila.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
+
