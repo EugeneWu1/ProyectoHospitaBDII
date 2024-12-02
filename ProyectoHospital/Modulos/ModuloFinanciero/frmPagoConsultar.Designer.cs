@@ -33,14 +33,14 @@
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cboxOpciones = new System.Windows.Forms.ComboBox();
+            this.dgPagos = new System.Windows.Forms.DataGridView();
+            this.cboxFiltro = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tboxBuscador = new System.Windows.Forms.TextBox();
+            this.tboxTexto = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPagos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,50 +89,57 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Consulta de Pagos";
             // 
-            // dataGridView1
+            // dgPagos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 212);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(564, 416);
-            this.dataGridView1.TabIndex = 2;
+            this.dgPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPagos.Location = new System.Drawing.Point(31, 120);
+            this.dgPagos.Name = "dgPagos";
+            this.dgPagos.Size = new System.Drawing.Size(564, 420);
+            this.dgPagos.TabIndex = 2;
             // 
-            // cboxOpciones
+            // cboxFiltro
             // 
-            this.cboxOpciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxOpciones.FormattingEnabled = true;
-            this.cboxOpciones.Location = new System.Drawing.Point(31, 178);
-            this.cboxOpciones.Name = "cboxOpciones";
-            this.cboxOpciones.Size = new System.Drawing.Size(156, 28);
-            this.cboxOpciones.TabIndex = 4;
+            this.cboxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxFiltro.FormattingEnabled = true;
+            this.cboxFiltro.Items.AddRange(new object[] {
+            "PagoID",
+            "MedicoID",
+            "Mes",
+            "Anio",
+            "TotalPagar"});
+            this.cboxFiltro.Location = new System.Drawing.Point(31, 83);
+            this.cboxFiltro.Name = "cboxFiltro";
+            this.cboxFiltro.Size = new System.Drawing.Size(156, 28);
+            this.cboxFiltro.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 181);
+            this.label2.Location = new System.Drawing.Point(195, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "BUSCAR PAGO";
             // 
-            // tboxBuscador
+            // tboxTexto
             // 
-            this.tboxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxBuscador.Location = new System.Drawing.Point(326, 178);
-            this.tboxBuscador.Name = "tboxBuscador";
-            this.tboxBuscador.Size = new System.Drawing.Size(269, 26);
-            this.tboxBuscador.TabIndex = 7;
+            this.tboxTexto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tboxTexto.Location = new System.Drawing.Point(326, 88);
+            this.tboxTexto.Name = "tboxTexto";
+            this.tboxTexto.Size = new System.Drawing.Size(269, 26);
+            this.tboxTexto.TabIndex = 7;
+            this.tboxTexto.TextChanged += new System.EventHandler(this.tboxTexto_TextChanged);
             // 
             // frmPagoConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 645);
-            this.Controls.Add(this.tboxBuscador);
+            this.ClientSize = new System.Drawing.Size(626, 568);
+            this.Controls.Add(this.tboxTexto);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cboxOpciones);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cboxFiltro);
+            this.Controls.Add(this.dgPagos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPagoConsultar";
@@ -142,7 +149,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPagos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,9 +161,9 @@
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox cboxOpciones;
+        private System.Windows.Forms.DataGridView dgPagos;
+        private System.Windows.Forms.ComboBox cboxFiltro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tboxBuscador;
+        private System.Windows.Forms.TextBox tboxTexto;
     }
 }
