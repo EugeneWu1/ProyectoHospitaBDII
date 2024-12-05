@@ -286,7 +286,7 @@ namespace ProyectoHospital.Modulos.Servicios
                             SqlCommand command = new SqlCommand("hospital.LiberarHabitaciones", cnx.ObtenerConexion());
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@ID", cbquirofano.SelectedValue);
-                            command.Parameters.AddWithValue("@Fecha", DateTime.Now);
+                            command.Parameters.AddWithValue("@Fecha", Convert.ToDateTime(Date.Value, CultureInfo.InvariantCulture));
                             command.Parameters.AddWithValue("@PacienteID", PatientId.Text);
 
                             CargarDatos();
@@ -393,8 +393,11 @@ namespace ProyectoHospital.Modulos.Servicios
                     txtpaciente.Text = filaSeleccionada["PacienteNombre"].ToString();
                     PatientId.Text = filaSeleccionada["PacienteID"].ToString();
                     Date.Value = Convert.ToDateTime(filaSeleccionada["FechaIngreso"], CultureInfo.InvariantCulture);
+                    if (filaSeleccionada["FechaAlta"].ToString() == "1/1/1900 00:00:00")
+                    {
+                         button1.Enabled = true;
+                    }
                     insertButton.Enabled = false;
-                    button1.Enabled = true;
                 }
             }
             catch (Exception ex)

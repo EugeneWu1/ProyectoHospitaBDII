@@ -65,9 +65,6 @@
             this.consultarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.rjDropDownMenu3 = new ProyectoHospital.Clases.RJDropDownMenu(this.components);
-            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.hospitalizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agendarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
@@ -511,44 +508,13 @@
             this.rjDropDownMenu3.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.rjDropDownMenu3.IsMainMenu = false;
             this.rjDropDownMenu3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultaToolStripMenuItem,
             this.hospitalizaciónToolStripMenuItem,
             this.cirugíaToolStripMenuItem});
             this.rjDropDownMenu3.MenuItemHeight = 25;
             this.rjDropDownMenu3.MenuItemTextColor = System.Drawing.Color.White;
             this.rjDropDownMenu3.Name = "rjDropDownMenu3";
             this.rjDropDownMenu3.PrimaryColor = System.Drawing.Color.DimGray;
-            this.rjDropDownMenu3.Size = new System.Drawing.Size(183, 82);
-            // 
-            // consultaToolStripMenuItem
-            // 
-            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agendarToolStripMenuItem,
-            this.consultarToolStripMenuItem4});
-            this.consultaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.consultaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.consultaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("consultaToolStripMenuItem.Image")));
-            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
-            this.consultaToolStripMenuItem.Text = "Consulta Médica";
-            // 
-            // agendarToolStripMenuItem
-            // 
-            this.agendarToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
-            this.agendarToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.agendarToolStripMenuItem.Name = "agendarToolStripMenuItem";
-            this.agendarToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
-            this.agendarToolStripMenuItem.Text = "Agendar";
-            this.agendarToolStripMenuItem.Click += new System.EventHandler(this.agendarToolStripMenuItem_Click);
-            // 
-            // consultarToolStripMenuItem4
-            // 
-            this.consultarToolStripMenuItem4.BackColor = System.Drawing.Color.DodgerBlue;
-            this.consultarToolStripMenuItem4.ForeColor = System.Drawing.Color.White;
-            this.consultarToolStripMenuItem4.Name = "consultarToolStripMenuItem4";
-            this.consultarToolStripMenuItem4.Size = new System.Drawing.Size(137, 24);
-            this.consultarToolStripMenuItem4.Text = "Consultar";
-            this.consultarToolStripMenuItem4.Click += new System.EventHandler(this.consultarToolStripMenuItem4_Click);
+            this.rjDropDownMenu3.Size = new System.Drawing.Size(185, 78);
             // 
             // hospitalizaciónToolStripMenuItem
             // 
@@ -559,7 +525,7 @@
             this.hospitalizaciónToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.hospitalizaciónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("hospitalizaciónToolStripMenuItem.Image")));
             this.hospitalizaciónToolStripMenuItem.Name = "hospitalizaciónToolStripMenuItem";
-            this.hospitalizaciónToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.hospitalizaciónToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.hospitalizaciónToolStripMenuItem.Text = "Hospitalización";
             // 
             // agendarToolStripMenuItem1
@@ -589,7 +555,7 @@
             this.cirugíaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cirugíaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cirugíaToolStripMenuItem.Image")));
             this.cirugíaToolStripMenuItem.Name = "cirugíaToolStripMenuItem";
-            this.cirugíaToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.cirugíaToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
             this.cirugíaToolStripMenuItem.Text = "Cirugía";
             this.cirugíaToolStripMenuItem.Click += new System.EventHandler(this.cirugíaToolStripMenuItem_Click);
             // 
@@ -778,7 +744,6 @@
         private System.Windows.Forms.ToolStripMenuItem médicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
         private Clases.RJDropDownMenu rjDropDownMenu3;
-        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hospitalizaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cirugíaToolStripMenuItem;
         private Clases.RJDropDownMenu rjDropDownMenu4;
@@ -798,8 +763,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem agendarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem agendarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem agendarToolStripMenuItem2;
