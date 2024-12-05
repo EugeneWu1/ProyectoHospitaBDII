@@ -30,11 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFarmacia));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvInventarioFarmacia = new System.Windows.Forms.DataGridView();
             this.insertButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -47,19 +46,18 @@
             this.consultID = new System.Windows.Forms.TextBox();
             this.direc = new System.Windows.Forms.TextBox();
             this.name = new System.Windows.Forms.TextBox();
-            this.medID = new System.Windows.Forms.TextBox();
+            this.ProductoID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioFarmacia)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnVolver);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -69,16 +67,6 @@
             this.panel1.Size = new System.Drawing.Size(1128, 72);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(865, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 56);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // btnVolver
             // 
@@ -97,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(328, 23);
+            this.label1.Location = new System.Drawing.Point(320, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 32);
             this.label1.TabIndex = 1;
@@ -113,13 +101,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgvInventarioFarmacia
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(516, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(356, 412);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvInventarioFarmacia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventarioFarmacia.Location = new System.Drawing.Point(516, 93);
+            this.dgvInventarioFarmacia.Name = "dgvInventarioFarmacia";
+            this.dgvInventarioFarmacia.Size = new System.Drawing.Size(559, 412);
+            this.dgvInventarioFarmacia.TabIndex = 1;
             // 
             // insertButton
             // 
@@ -235,13 +223,13 @@
             this.name.Size = new System.Drawing.Size(322, 27);
             this.name.TabIndex = 233;
             // 
-            // medID
+            // ProductoID
             // 
-            this.medID.Location = new System.Drawing.Point(143, 114);
-            this.medID.Multiline = true;
-            this.medID.Name = "medID";
-            this.medID.Size = new System.Drawing.Size(322, 27);
-            this.medID.TabIndex = 232;
+            this.ProductoID.Location = new System.Drawing.Point(143, 114);
+            this.ProductoID.Multiline = true;
+            this.ProductoID.Name = "ProductoID";
+            this.ProductoID.Size = new System.Drawing.Size(322, 27);
+            this.ProductoID.TabIndex = 232;
             // 
             // label2
             // 
@@ -253,16 +241,25 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(207, 274);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(258, 27);
+            this.textBox1.TabIndex = 237;
+            // 
             // frmFarmacia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 618);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.consultID);
             this.Controls.Add(this.direc);
             this.Controls.Add(this.name);
-            this.Controls.Add(this.medID);
+            this.Controls.Add(this.ProductoID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -272,18 +269,18 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.insertButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvInventarioFarmacia);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmFarmacia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventario Farmacia";
+            this.Load += new System.EventHandler(this.frmFarmacia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioFarmacia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,12 +292,11 @@
         private System.Windows.Forms.PictureBox btnVolver;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvInventarioFarmacia;
         private System.Windows.Forms.Button insertButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button updateButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -309,7 +305,8 @@
         private System.Windows.Forms.TextBox consultID;
         private System.Windows.Forms.TextBox direc;
         private System.Windows.Forms.TextBox name;
-        private System.Windows.Forms.TextBox medID;
+        private System.Windows.Forms.TextBox ProductoID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
