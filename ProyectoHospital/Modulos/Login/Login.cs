@@ -76,7 +76,7 @@ namespace ProyectoHospital.Modulos.Login
                 conexion = new SqlConnection(connection);
                 conexion.Open();
                 conectado = true;
-                MessageBox.Show("Se conectado conectado con éxito.", "Conexión Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se ha conectado con éxito.", "Conexión Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
             }
             catch (SqlException ex)

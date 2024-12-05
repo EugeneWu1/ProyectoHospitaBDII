@@ -115,47 +115,53 @@
             // 
             // btnConsultar
             // 
+            this.btnConsultar.BackColor = System.Drawing.Color.Blue;
+            this.btnConsultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnConsultar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
-            this.btnConsultar.Location = new System.Drawing.Point(10, 440);
+            this.btnConsultar.ForeColor = System.Drawing.Color.Transparent;
+            this.btnConsultar.Location = new System.Drawing.Point(12, 440);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(112, 44);
             this.btnConsultar.TabIndex = 216;
             this.btnConsultar.Text = "CONSULTAR";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.insertButton_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.BackColor = System.Drawing.Color.Lime;
             this.btnAgregar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(144, 440);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(112, 44);
             this.btnAgregar.TabIndex = 217;
             this.btnAgregar.Text = "AGREGAR";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.Red;
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.Transparent;
             this.deleteButton.Location = new System.Drawing.Point(144, 490);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(112, 44);
             this.deleteButton.TabIndex = 220;
             this.deleteButton.Text = "ELIMINAR";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // updateButton
             // 
+            this.updateButton.BackColor = System.Drawing.Color.Yellow;
             this.updateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.Location = new System.Drawing.Point(12, 490);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(112, 44);
             this.updateButton.TabIndex = 221;
             this.updateButton.Text = "EDITAR";
-            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.UseVisualStyleBackColor = false;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // label6

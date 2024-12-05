@@ -9,7 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+//Kedwin Hissell Guillen García #20202000370
+//Módulo de farmacia
 namespace ProyectoHospital.Modulos.Farmacia
 {
     public partial class frmFarmacia : Form
