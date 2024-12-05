@@ -53,6 +53,7 @@ namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
                 telef.Text = row.Cells["Telefono"].Value.ToString();
                 espe.Text = row.Cells["Especialidad"].Value.ToString();
                 tipo.Text = row.Cells["Tipo"].Value.ToString();
+                salario.Text = row.Cells["Salario"].Value.ToString();
                 consult.Text = row.Cells["ConsultorioID"].Value.ToString();
 
             }
@@ -135,6 +136,7 @@ namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
             filter.Items.Add("Especialidad");
             filter.Items.Add("Tipo");
             filter.Items.Add("ConsultorioID");
+            filter.Items.Add("Salario");
             filter.SelectedIndex = 0; // Seleccionar el primer campo por defecto
         }
 

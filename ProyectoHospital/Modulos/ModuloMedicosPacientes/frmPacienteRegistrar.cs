@@ -44,17 +44,44 @@ namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
+                // Validar que los campos no estén vacíos
+                if (string.IsNullOrWhiteSpace(pacID.Text) ||
+                    string.IsNullOrWhiteSpace(name.Text) ||
+                    sexCombo.SelectedItem == null ||
+                    string.IsNullOrWhiteSpace(identidad.Text) ||
+                    string.IsNullOrWhiteSpace(direc.Text) ||
+                    string.IsNullOrWhiteSpace(telef.Text))
+                {
+                    MessageBox.Show("Todos los campos son obligatorios.");
+                    return;
+                }
+
+                // Validar formato y valores
+                if (!int.TryParse(pacID.Text, out int pacienteID) || pacienteID <= 0)
+                {
+                    MessageBox.Show("El ID del paciente debe ser un número positivo.");
+                    return;
+                }
+
+                if (!System.Text.RegularExpressions.Regex.IsMatch(identidad.Text.Trim(), @"^\d{4}-\d{4}-\d{5}$"))
+                {
+                    MessageBox.Show("La identidad debe tener el formato ****-****-*****.");
+                    return;
+                }
+
+             
+
                 SqlCommand cmd = new SqlCommand("sphRegPacInsert", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@PacienteID", int.Parse(pacID.Text));
-                cmd.Parameters.AddWithValue("@Nombre", name.Text);
+                // Usar valores validados
+                cmd.Parameters.AddWithValue("@PacienteID", pacienteID);
+                cmd.Parameters.AddWithValue("@Nombre", name.Text.Trim());
                 cmd.Parameters.AddWithValue("@Sexo", sexCombo.SelectedItem.ToString());
-                cmd.Parameters.AddWithValue("@Identidad", identidad.Text);
-                cmd.Parameters.AddWithValue("@Direccion", direc.Text);
-                cmd.Parameters.AddWithValue("@Telefono", telef.Text);
-                cmd.Parameters.AddWithValue("@FechaNacimiento",fecha.Value);
-
+                cmd.Parameters.AddWithValue("@Identidad", identidad.Text.Trim());
+                cmd.Parameters.AddWithValue("@Direccion", direc.Text.Trim());
+                cmd.Parameters.AddWithValue("@Telefono", telef.Text.Trim());
+                cmd.Parameters.AddWithValue("@FechaNacimiento", fecha.Value);
 
                 try
                 {
@@ -69,37 +96,73 @@ namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea editar este registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que desea editar este registro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                return;
+            }
+
+            // Validar que los campos no estén vacíos
+            if (string.IsNullOrWhiteSpace(pacID.Text) ||
+                string.IsNullOrWhiteSpace(name.Text) ||
+                sexCombo.SelectedItem == null ||
+                string.IsNullOrWhiteSpace(identidad.Text) ||
+                string.IsNullOrWhiteSpace(direc.Text) ||
+                string.IsNullOrWhiteSpace(telef.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.");
+                return;
+            }
+
+            // Validar formato y valores
+            if (!int.TryParse(pacID.Text, out int pacienteID) || pacienteID <= 0)
+            {
+                MessageBox.Show("El ID del paciente debe ser un número positivo.");
+                return;
+            }
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(identidad.Text.Trim(), @"^\d{4}-\d{4}-\d{5}$"))
+            {
+                MessageBox.Show("La identidad debe tener el formato ****-****-*****.");
+                return;
+            }
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch(telef.Text.Trim(), @"^\d{4}-\d{4}$"))
+            {
+                MessageBox.Show("El teléfono debe tener el formato ****-****.");
+                return;
+            }
+
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("sphRegPacUpdate", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Usar valores validados
+                cmd.Parameters.AddWithValue("@PacienteID", pacienteID);
+                cmd.Parameters.AddWithValue("@Nombre", name.Text.Trim());
+                cmd.Parameters.AddWithValue("@Sexo", sexCombo.SelectedItem.ToString());
+                cmd.Parameters.AddWithValue("@Identidad", identidad.Text.Trim());
+                cmd.Parameters.AddWithValue("@Direccion", direc.Text.Trim());
+                cmd.Parameters.AddWithValue("@Telefono", telef.Text.Trim());
+                cmd.Parameters.AddWithValue("@FechaNacimiento", fecha.Value);
+
+                try
                 {
-                    SqlCommand cmd = new SqlCommand("sphRegPacUpdate", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    cmd.Parameters.AddWithValue("@PacienteID", int.Parse(pacID.Text));
-                    cmd.Parameters.AddWithValue("@Nombre", name.Text);
-                    cmd.Parameters.AddWithValue("@Sexo", sexCombo.SelectedItem.ToString());
-                    cmd.Parameters.AddWithValue("@Identidad", identidad.Text);
-                    cmd.Parameters.AddWithValue("@Direccion", direc.Text);
-                    cmd.Parameters.AddWithValue("@Telefono", telef.Text);
-                    cmd.Parameters.AddWithValue("@FechaNacimiento", fecha.Value);
-
-                    try
-                    {
-                        conn.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Paciente actualizado correctamente.");
-                        CargarDatosEnGrid();
-                        LimpiarControles();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Paciente actualizado correctamente.");
+                    CargarDatosEnGrid();
+                    LimpiarControles();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
                 }
             }
         }
