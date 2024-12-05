@@ -58,6 +58,8 @@
             this.search = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.salario = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -163,7 +165,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(336, 190);
+            this.label10.Location = new System.Drawing.Point(336, 228);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(124, 21);
             this.label10.TabIndex = 206;
@@ -274,7 +276,7 @@
             // 
             this.consult.AutoSize = true;
             this.consult.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consult.Location = new System.Drawing.Point(454, 190);
+            this.consult.Location = new System.Drawing.Point(454, 228);
             this.consult.Name = "consult";
             this.consult.Size = new System.Drawing.Size(16, 21);
             this.consult.TabIndex = 218;
@@ -352,6 +354,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.salario);
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.consult);
             this.panel2.Controls.Add(this.tipo);
@@ -373,8 +377,28 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(116, 377);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(649, 292);
+            this.panel2.Size = new System.Drawing.Size(649, 311);
             this.panel2.TabIndex = 224;
+            // 
+            // salario
+            // 
+            this.salario.AutoSize = true;
+            this.salario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salario.Location = new System.Drawing.Point(456, 190);
+            this.salario.Name = "salario";
+            this.salario.Size = new System.Drawing.Size(16, 21);
+            this.salario.TabIndex = 221;
+            this.salario.Text = "-";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(336, 190);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 21);
+            this.label14.TabIndex = 220;
+            this.label14.Text = "Salario:";
             // 
             // frmMedicoConsultar
             // 
@@ -436,5 +460,7 @@
         private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label salario;
+        private System.Windows.Forms.Label label14;
     }
 }

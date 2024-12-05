@@ -56,6 +56,8 @@
             this.identidad = new System.Windows.Forms.TextBox();
             this.telef = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.salario = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -112,7 +114,7 @@
             // 
             this.clsButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.clsButton.Image = global::ProyectoHospital.Properties.Resources.Clear;
-            this.clsButton.Location = new System.Drawing.Point(249, 466);
+            this.clsButton.Location = new System.Drawing.Point(256, 519);
             this.clsButton.Name = "clsButton";
             this.clsButton.Size = new System.Drawing.Size(47, 44);
             this.clsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -123,7 +125,7 @@
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(951, 466);
+            this.deleteButton.Location = new System.Drawing.Point(958, 519);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(112, 44);
             this.deleteButton.TabIndex = 196;
@@ -134,7 +136,7 @@
             // updateButton
             // 
             this.updateButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Location = new System.Drawing.Point(833, 466);
+            this.updateButton.Location = new System.Drawing.Point(840, 519);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(112, 44);
             this.updateButton.TabIndex = 195;
@@ -145,7 +147,7 @@
             // insertButton
             // 
             this.insertButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertButton.Location = new System.Drawing.Point(313, 466);
+            this.insertButton.Location = new System.Drawing.Point(320, 519);
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(112, 44);
             this.insertButton.TabIndex = 194;
@@ -158,7 +160,7 @@
             this.dgRegMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgRegMed.Location = new System.Drawing.Point(311, 89);
             this.dgRegMed.Name = "dgRegMed";
-            this.dgRegMed.Size = new System.Drawing.Size(759, 357);
+            this.dgRegMed.Size = new System.Drawing.Size(759, 405);
             this.dgRegMed.TabIndex = 193;
             this.dgRegMed.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRegMed_CellClick);
             this.dgRegMed.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRegMed_CellContentClick);
@@ -189,7 +191,7 @@
             // 
             // consultID
             // 
-            this.consultID.Location = new System.Drawing.Point(174, 419);
+            this.consultID.Location = new System.Drawing.Point(175, 467);
             this.consultID.Multiline = true;
             this.consultID.Name = "consultID";
             this.consultID.Size = new System.Drawing.Size(121, 27);
@@ -233,7 +235,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(37, 419);
+            this.label10.Location = new System.Drawing.Point(38, 467);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 21);
             this.label10.TabIndex = 184;
@@ -325,11 +327,32 @@
             this.label2.TabIndex = 200;
             this.label2.Text = "Teléfono";
             // 
+            // salario
+            // 
+            this.salario.Location = new System.Drawing.Point(175, 420);
+            this.salario.Multiline = true;
+            this.salario.Name = "salario";
+            this.salario.Size = new System.Drawing.Size(121, 27);
+            this.salario.TabIndex = 203;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(38, 420);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 21);
+            this.label9.TabIndex = 202;
+            this.label9.Text = "Salario";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
             // frmMedicoRegistrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 562);
+            this.ClientSize = new System.Drawing.Size(1103, 580);
+            this.Controls.Add(this.salario);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.telef);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.identidad);
@@ -399,5 +422,7 @@
         private System.Windows.Forms.TextBox identidad;
         private System.Windows.Forms.TextBox telef;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox salario;
+        private System.Windows.Forms.Label label9;
     }
 }
