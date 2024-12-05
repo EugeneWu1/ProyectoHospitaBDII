@@ -271,8 +271,8 @@ namespace ProyectoHospital.Modulos.ModuloPagos
             tabla.Columns.Add("Cantidad", typeof(int));
             tabla.Columns.Add("Precio Unitario", typeof(float));
             tabla.Columns.Add("Descripcion", typeof(string));
-            // tabla.Columns.Add("ISV", typeof(float));
-            // tabla.Columns.Add("Subtotal", typeof(float));
+             tabla.Columns.Add("ISV", typeof(float));
+            tabla.Columns.Add("Subtotal", typeof(float));
 
             dgFactura.DataSource = tabla; // Asignar la tabla al DataGridView
         }
