@@ -196,8 +196,8 @@ namespace ProyectoHospital.Modulos.Login
 
         private void Login_Load(object sender, EventArgs e)
         {
-            txtUser.Text = "eugene.wu";
-            txtPass.Text = "EW20212030388";
+            //txtUser.Text = "eugene.wu";
+            //txtPass.Text = "EW20212030388";
         }
     }
 }

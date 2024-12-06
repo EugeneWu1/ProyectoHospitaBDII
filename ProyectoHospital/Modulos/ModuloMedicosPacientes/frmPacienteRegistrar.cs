@@ -69,7 +69,17 @@ namespace ProyectoHospital.Modulos.ModuloMedicosPacientes
                     return;
                 }
 
-             
+                if (!System.Text.RegularExpressions.Regex.IsMatch(telef.Text.Trim(), @"^\d{4}-\d{4}$"))
+                {
+                    MessageBox.Show("El teléfono debe tener el formato ****-****.");
+                    return;
+                }
+
+                if (fecha.Value.Date >= DateTime.Now.Date)
+                {
+                    MessageBox.Show("La fecha de nacimiento debe ser menor a la fecha actual.");
+                    return;
+                }
 
                 SqlCommand cmd = new SqlCommand("sphRegPacInsert", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
